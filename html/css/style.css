@@ -79,7 +79,7 @@
 /* GLOBAL SETTING */
 /*-------------------------------------------------------*/
 * {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 }
 
 html,
@@ -93,7 +93,7 @@ body {
 	position: relative;
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 16px;
 	line-height: 32px;
 	font-weight: 400;
@@ -106,7 +106,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-weight: 700;
 	color: #3D3D3D;
 }
@@ -142,7 +142,7 @@ h6 {
 }
 
 p {
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 16px;
 	line-height: 32px;
 	font-weight: 400;
@@ -242,7 +242,7 @@ a:focus {
 }
 
 .a-btn {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 2px;
@@ -396,7 +396,7 @@ a:focus {
 }
 
 .a-btn-2 {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 2px;
@@ -553,7 +553,7 @@ a:focus {
 .a-btn-arrow {
 	position: relative;
 	display: inline-block;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 30px;
 	letter-spacing: 2px;
@@ -587,8 +587,8 @@ a:focus {
 .a-btn-arrow-2 {
 	position: relative;
 	display: inline-block;
-	font-family: 'Roboto', sans-serif;
-	font-size: 11px;
+	font-family: "mundial", sans-serif;
+	font-size: 14px;
 	line-height: 30px;
 	letter-spacing: 2px;
 	font-weight: 500;
@@ -599,6 +599,7 @@ a:focus {
 
 .a-btn-arrow-2 .arrow-right {
 	background-color: #3D3D3D;
+	margin-top: 2px;
 }
 
 .a-btn-arrow-2 .arrow-right:before,
@@ -3696,7 +3697,6 @@ a:focus {
 
 .prague-header .prague-logo a {
 	display: inline-block;
-	vertical-align: middle;
 	font-size: 20px;
 	line-height: 32px;
 	font-weight: 500;
@@ -3777,7 +3777,7 @@ a:focus {
 	text-decoration: none;
 	text-align: center;
 	font-size: 16px;
-	line-height: 32px;
+	line-height: 28px;
 	background-color: transparent;
 	-webkit-transition: border 0.3s ease-in, background-color 0.3s ease-in;
 	-o-transition: border 0.3s ease-in, background-color 0.3s ease-in;
@@ -3869,7 +3869,7 @@ a:focus {
 	text-decoration: none;
 	text-align: center;
 	font-size: 16px;
-	line-height: 32px;
+	line-height: 28px;
 	background-color: transparent;
 	-webkit-transition: border 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
 	-o-transition: border 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
@@ -4707,7 +4707,7 @@ a:focus {
 }
 
 .prague_filter_projects .prague_filter_link_wrapper .filter-clear-all {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 2px;
@@ -4777,7 +4777,7 @@ a:focus {
 
 .prague_filter_projects .prague_filter_item .filter_item_category li {
 	position: relative;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 30px;
 	letter-spacing: 1.5px;
@@ -4880,8 +4880,9 @@ a:focus {
 
 .prague-footer-info-block .footer-info-block-content {
 	font-size: 13px;
-	line-height: 26px;
+	line-height: 20px;
 	font-weight: 400;
+	margin-top: 20px;
 }
 
 .prague-footer-info-block .footer-info-block-content p {
@@ -4988,7 +4989,6 @@ a:focus {
 
 .prague-footer .footer-top-content {
 	position: relative;
-	padding-bottom: 33px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -5020,7 +5020,7 @@ a:focus {
 }
 
 .prague-footer .footer-top-content .prague-footer-main-block .footer-main-content {
-	margin-top: 36px;
+	margin-top: 20px;
 	max-width: 470px;
 	font-size: 13px;
 	line-height: 26px;
@@ -5036,7 +5036,7 @@ a:focus {
 
 .prague-footer .footer-top-content .prague-footer-info-block {
 	width: 50%;
-	padding-top: 28px;
+	padding-top: 0;
 	text-align: right;
 	float: right;
 }
@@ -5248,7 +5248,7 @@ a:focus {
 }
 
 .top-banner .content .subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 4.5px;
@@ -5809,7 +5809,7 @@ a:focus {
 }
 
 .heading .subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 4.5px;
@@ -5857,7 +5857,7 @@ a:focus {
 .heading .content h6 {
 	position: relative;
 	display: inline-block;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 4.5px;
@@ -6171,7 +6171,7 @@ a:focus {
 }
 
 .prague-counter .numbers svg mask .count {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 }
 
 .prague-counter .numbers svg mask .number {
@@ -6345,7 +6345,7 @@ a:focus {
 .testimonials-wrapper .testimonials-pagination-wrapper .swiper-pagination .swiper-pagination-bullet {
 	position: relative;
 	display: inline-block;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 30px;
 	letter-spacing: 1.5px;
@@ -6567,7 +6567,7 @@ a:focus {
 	visibility: hidden;
 	top: 0;
 	right: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -6986,7 +6986,7 @@ a:focus {
 /*-------------------------------------------------------*/
 .prague-formidable .frm_forms.with_frm_style label.frm_primary_label,
 .prague-formidable .frm_forms.with_frm_style.frm_login_form label {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 2.2px;
@@ -7011,7 +7011,7 @@ a:focus {
 .prague-formidable .frm_form_fields_error_style,
 .prague-formidable .frm_forms.with_frm_style .chosen-container-multi .chosen-choices,
 .prague-formidable .frm_forms.with_frm_style .chosen-container-single .chosen-single {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -7060,7 +7060,7 @@ a:focus {
 
 .prague-formidable .frm_forms.with_frm_style .frm_radio label,
 .prague-formidable .frm_forms.with_frm_style .frm_checkbox label {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -7078,7 +7078,7 @@ a:focus {
 .prague-formidable .frm_forms.with_frm_style .frm_submit input[type=button],
 .prague-formidable .frm_form_submit_style,
 .prague-formidable .frm_forms.with_frm_style.frm_login_form input[type=submit] {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 1.5px;
@@ -7117,14 +7117,14 @@ a:focus {
 
 .prague-formidable .frm_forms.with_frm_style .frm_error_style {
 	border-radius: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
 }
 
 .prague-formidable .frm_forms.with_frm_style .frm_error {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 1px;
@@ -7135,7 +7135,7 @@ a:focus {
 .prague-formidable .frm_forms.with_frm_style .frm_message,
 .prague-formidable .frm_success_style {
 	border-radius: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
@@ -7143,7 +7143,7 @@ a:focus {
 
 .prague-formidable .frm_forms.with_frm_style .frm_message p,
 .prague-formidable .frm_success_style p {
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
@@ -7715,7 +7715,7 @@ a:focus {
 }
 
 .prague-shortcode-parent .prague-shortcode-heading .parent-subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 4.5px;
@@ -7933,7 +7933,7 @@ a:focus {
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -8051,7 +8051,7 @@ a:focus {
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -10993,7 +10993,7 @@ a:focus {
 }
 
 .post-comments .comment-respond .comment-reply-title a {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 28px;
 	letter-spacing: 1.5px;
@@ -11016,7 +11016,7 @@ a:focus {
 .post-comments .comment-form input[type=text],
 .post-comments .comment-form input[type=email],
 .post-comments .comment-form textarea {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -11057,7 +11057,7 @@ a:focus {
 }
 
 .post-comments .comment-form .submit-btn {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	letter-spacing: 1.5px;
@@ -11474,7 +11474,7 @@ a:focus {
 
 .prague-sidebar .widget_search form input[type="text"],
 .prague-sidebar .widget_search form input[type="search"] {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -11649,7 +11649,7 @@ a:focus {
 }
 
 .prague-error-wrapper .prague-error-content .error-subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 3px;
@@ -11709,7 +11709,7 @@ a:focus {
 }
 
 .prague-protected-wrapper .prague-protected-content .protected-subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 3px;
@@ -11729,7 +11729,7 @@ a:focus {
 }
 
 .prague-protected-wrapper .prague-protected-form input[type=password] {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -11824,7 +11824,7 @@ a:focus {
 }
 
 .prague-coming-wrapper .prague-coming-content .coming-subtitle {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 3px;
@@ -11896,7 +11896,7 @@ a:focus {
 }
 
 .prague-coming-wrapper .prague-coming-content .mc4wp-form input[type=email] {
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	line-height: 26px;
 	font-weight: 300;
@@ -14137,7 +14137,7 @@ a:focus {
 .number-arrows {
 	width: 32px;
 	height: 32px;
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 }
 
 .number-arrows.right-arrow .number {
@@ -14733,7 +14733,7 @@ a:focus {
 	background-color: transparent;
 	color: #3D3D3D;
 	outline: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 11px;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -15267,7 +15267,7 @@ a:focus {
 	-webkit-user-select: none;
 	overflow: hidden;
 	color: rgba(17, 17, 17, 0.67);
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 40px;
@@ -15634,7 +15634,7 @@ a:focus {
 	outline: none;
 	background-color: #f2f2f2;
 	color: rgba(17, 17, 17, 0.5);
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	font-weight: 300;
 	line-height: 26px;
@@ -15710,7 +15710,7 @@ a:focus {
 .woocommerce .woocommerce-result-count {
 	margin: 0;
 	color: rgba(17, 17, 17, 0.67);
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 46px;
@@ -16099,7 +16099,7 @@ a:focus {
 	outline: none;
 	background-color: #f2f2f2;
 	color: rgba(17, 17, 17, 0.5);
-	font-family: "Roboto", sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 12px;
 	font-weight: 300;
 	line-height: 26px;
@@ -17638,7 +17638,7 @@ span.wpcf7-not-valid-tip {
 }
 
 .split-wrapper .subtitle {
-	font-family: Roboto, sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 4.5px;
@@ -17648,7 +17648,7 @@ span.wpcf7-not-valid-tip {
 
 .split-wrapper .title {
 	font-size: 40px;
-	font-family: Roboto, sans-serif;
+	font-family: "mundial", sans-serif;
 	font-weight: 700;
 	letter-spacing: 3.5px;
 	text-transform: uppercase;
@@ -17661,7 +17661,7 @@ span.wpcf7-not-valid-tip {
 }
 
 .split-wrapper .description {
-	font-family: Roboto, sans-serif;
+	font-family: "mundial", sans-serif;
 	font-size: 16px;
 	line-height: 32px;
 	font-weight: 400;
@@ -18341,7 +18341,7 @@ span.wpcf7-not-valid-tip {
 	line-height: 18px;
 	font-weight: 300;
 	color: rgb(255, 255, 255);
-	font-family: Roboto;
+	font-family: "mundial", sans-serif;
 	letter-spacing: 4px;
 	transition: none 0s ease 0s;
 	-webkit-transition: none 0s ease 0s;
