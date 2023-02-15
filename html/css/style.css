@@ -4874,7 +4874,6 @@ a:focus {
 	font-weight: 300;
 	font-style: normal;
 	letter-spacing: 4.5px;
-	color: white;
 	margin-top: 0;
 	margin-bottom: 37px;
 }
@@ -4883,7 +4882,6 @@ a:focus {
 	font-size: 13px;
 	line-height: 26px;
 	font-weight: 400;
-	color: white;
 }
 
 .prague-footer-info-block .footer-info-block-content p {
@@ -4903,6 +4901,7 @@ a:focus {
 	-webkit-transition: opacity 0.3s ease-in;
 	-o-transition: opacity 0.3s ease-in;
 	transition: opacity 0.3s ease-in;
+	display: block;
 }
 
 .prague-footer-info-block .footer-info-block-content a:hover {
@@ -4919,20 +4918,19 @@ a:focus {
 
 .prague-footer {
 	position: relative;
-	background-color: black;
+	background-color: #E6E2D7;
 }
 
-.prague-footer:before {
+/* .prague-footer:before {
 	content: '';
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: black;
-	opacity: 0.8;
+	opacity: 1;
 	z-index: 90;
-}
+} */
 
 .prague-footer.modern {
 	position: fixed;
@@ -4984,7 +4982,7 @@ a:focus {
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 140px 0 140px;
+	padding: 80px 0;
 	z-index: 100;
 }
 
@@ -5027,7 +5025,6 @@ a:focus {
 	font-size: 13px;
 	line-height: 26px;
 	font-weight: 400;
-	color: rgba(255, 255, 255, 0.7);
 }
 
 .prague-footer .footer-top-content .prague-footer-main-block .footer-main-content p {
