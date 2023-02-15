@@ -8478,6 +8478,11 @@ a:focus {
 	-o-transition-delay: .15s;
 	transition-delay: .15s;
 }
+.menu-footer .project-masonry-wrapper .project-masonry-item-img-link:hover .project-masonry-item-content {
+	-webkit-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	transform: translateY(-30px);
+}
 
 .project-masonry-wrapper .project-masonry-item-img {
 	width: 100%;
@@ -8515,7 +8520,7 @@ a:focus {
 	left: 0;
 	bottom: -10px;
 	max-width: 80%;
-	background-color: white;
+	background-color: #F6F5EC;
 	padding-top: 25px;
 	padding-right: 40px;
 	-webkit-transform: translateY(100%);
@@ -8533,12 +8538,21 @@ a:focus {
 	transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-footer .project-masonry-wrapper .project-masonry-item-content {
+	padding: 2px 20px 3px 10px;
+	background-color: rgba(246, 245, 236, 0.651);
+	max-width: 90%;
+}
+
 .project-masonry-wrapper .project-masonry-item-title {
 	text-transform: none;
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: 500;
 	line-height: 26px;
+}
+.menu-footer .project-masonry-wrapper .project-masonry-item-title {
+	font-size: 18px;
 }
 
 .project-masonry-wrapper .project-masonry-item-category {
@@ -18646,6 +18660,14 @@ span.wpcf7-not-valid-tip {
 	padding-right: 45px !important;
 	font-size: 11px !important;
 	letter-spacing: 0 !important;
+}
+
+.menu-footer {
+	display: block;
+}
+.menu-footer .container-fluid {
+	max-width: none;
+	padding: 0;
 }
 
 @media screen and (max-width: 320px) {
