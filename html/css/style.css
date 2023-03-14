@@ -5835,6 +5835,9 @@ a:focus {
 	margin-bottom: 0;
 	letter-spacing: 0.9px;
 }
+.heading .title img {
+    vertical-align: baseline;
+}
 .heading .title.uppercase {
 	text-transform: uppercase;
 }
@@ -10235,7 +10238,7 @@ a:focus {
 	max-width: 430px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 40px;
+	/* margin-bottom: 40px; */
 }
 
 .prague-blog-grid-wrapper .blog-grid-img {
