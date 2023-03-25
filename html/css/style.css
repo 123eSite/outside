@@ -16751,59 +16751,69 @@ a:focus {
 
 .about-section-modern {
 	position: relative;
-	min-height: 600px;
-	margin: 90px 0 80px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
 }
 
 .about-section-modern .about-section__img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 600px;
-	width: 65%;
-	background-size: cover;
-	background-position: top center;
-	background-repeat: no-repeat;
+	height: 340px;
+    width: 45%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-left: 70px;
 }
-
+.about-section-modern  .grad-word {
+    position: absolute;
+    top: 40%;
+    left: -35px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 150px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+}
 .about-section-modern .content {
 	text-align: right;
 	z-index: 10;
 	position: relative;
 	float: right;
-	max-width: 51%;
+	width: 55%;
+    padding-left: 80px;
+    max-width: 500px;
+    position: relative;
 }
 
 .about-section-modern .subtitle {
-	font-family: "Open Sans", sans-serif;
 	font-size: 12px;
 	line-height: 1.33;
-	color: #111;
+	color: #3D3D3D;
 	font-style: normal;
 	font-weight: 600;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	letter-spacing: 1.8px;
 	-webkit-font-smoothing: antialiased;
 }
 
 .about-section-modern .title {
 	font-size: 50px;
-	font-weight: 600;
-	font-family: "Open Sans", sans-serif;
-	line-height: 1.26;
+	line-height: 1;
 	letter-spacing: .2px;
-	margin-bottom: 50px;
-	color: #111;
+	margin-bottom: 14px;
+	color: #3D3D3D;
 	text-align: right;
+	margin-top: 0;
 }
 
 .about-section-modern .title b {
@@ -16921,7 +16931,7 @@ a:focus {
 
 	.about-section-modern .about-section__img {
 		position: static;
-		height: 300px;
+		height: 340px;
 		width: 100%;
 	}
 
