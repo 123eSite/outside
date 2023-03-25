@@ -3696,7 +3696,7 @@ a:focus {
 .prague-header .prague-logo a {
 	display: inline-block;
 	font-size: 20px;
-	line-height: 32px;
+	line-height: 16px;
 	font-weight: 500;
 	text-transform: uppercase;
 	-webkit-transition: color 0.3s ease-in;
@@ -4127,6 +4127,14 @@ a:focus {
 
 .prague-header.simple.sticky-menu.dark.scroll {
 	background-color: #fff;
+}
+
+.head-pages {
+	height: 90px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .main-menu {
@@ -4881,6 +4889,7 @@ a:focus {
 	line-height: 20px;
 	font-weight: 400;
 	margin-top: 20px;
+	text-align: right;
 }
 
 .prague-footer-info-block .footer-info-block-content p {
@@ -4889,6 +4898,7 @@ a:focus {
 	font-weight: inherit;
 	color: inherit;
 	margin-bottom: 0;
+	text-align: right;
 }
 
 .prague-footer-info-block .footer-info-block-content a {
@@ -12656,7 +12666,7 @@ a:focus {
 
 .project-detail-block-outer .project-detail-block-wrapper .project-detail-block-item {
 	height: 100%;
-	background-color: #f2f2f2;
+	background-color: #e6e2d7;
 	padding: 48px 15px 38px 50px;
 }
 
@@ -16432,7 +16442,7 @@ a:focus {
 .banner-slider-wrap.andra .s-back-switch {
 	background-position: center;
 	background-size: cover;
-	min-height: 640px;
+	min-height: 400px;
 	max-height: 90vh;
 	height: auto !important;
 }
