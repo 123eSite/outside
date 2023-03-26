@@ -10642,13 +10642,12 @@ a:focus {
 .post-detailed .prague-post-content h4,
 .post-detailed .prague-post-content h5,
 .post-detailed .prague-post-content h6 {
-	margin-top: 42px;
-	margin-bottom: 42px;
-	color: #3D3D3D;
+	margin-top: 20px;
+	margin-bottom: 16px;
 }
 
 .post-detailed .prague-post-content p {
-	margin-bottom: 32px;
+	margin-bottom: 16px;
 	color: #7e7d7d;
 }
 
@@ -11080,8 +11079,8 @@ a:focus {
 	height: 57px;
 	margin-bottom: 20px;
 	outline: none;
-	background-color: #f2f2f2;
-	color: rgba(17, 17, 17, 0.5);
+	background-color: #fff;
+	color: #7e7d7d;
 	-webkit-transition: border-bottom-color 0.3s ease-in, color 0.3s ease-in;
 	-o-transition: border-bottom-color 0.3s ease-in, color 0.3s ease-in;
 	transition: border-bottom-color 0.3s ease-in, color 0.3s ease-in;
