@@ -74,15 +74,12 @@ h3 a {
     line-height: 40px;
     color: #222222 !important;
     font-weight: 700;
-    font-family: Roboto, sans-serif;
-    text-transform: lowercase;
 }
 
 
 .tg-item-term {
     font-size: 18px;
     color: #999999;
-    font-family: Roboto, sans-serif;
     font-weight: 320;
 }
 
@@ -97,7 +94,7 @@ h3 a {
 
 .grid-item .img-wrapp:hover .tg-item-media-content  {
     visibility: visible;
-    opacity: 1;
+    opacity: .7;
 
 }
 

@@ -10642,7 +10642,7 @@ a:focus {
 .post-detailed .prague-post-content h4,
 .post-detailed .prague-post-content h5,
 .post-detailed .prague-post-content h6 {
-	margin-top: 20px;
+	padding-top: 10px;
 	margin-bottom: 16px;
 }
 
@@ -10761,7 +10761,7 @@ a:focus {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: flex-end;
-	margin-top: 60px;
+	margin-top: 20px;
 	padding: 0;
 }
 
@@ -14361,19 +14361,19 @@ a:focus {
 /*-------------------------------------------------------*/
 /* SHOWCASE SLIDER */
 /*-------------------------------------------------------*/
-.showcase_slider .swiper-slide:hover .content-showcase-wrapper {
+/* .showcase_slider .swiper-slide:hover .content-showcase-wrapper {
 	background-color: #111;
 	background-image: url(../images/lines.png);
-}
+} */
 
-.showcase_slider .swiper-slide:hover .slide-title a {
+/* .showcase_slider .swiper-slide:hover .slide-title a {
 	color: #ffffff;
-}
+} */
 
-.showcase_slider .swiper-slide:hover .slide-category a {
+/* .showcase_slider .swiper-slide:hover .slide-category a {
 	color: #ffffff;
 	opacity: 1;
-}
+} */
 
 .showcase_slider .swiper-buttons {
 	display: -webkit-box;
@@ -14389,7 +14389,7 @@ a:focus {
 	width: 55px;
 	height: 55px;
 	background-image: none;
-	background-color: #ffffff;
+	background-color: #e6e2d7;
 	color: #111;
 	-webkit-transition: color .35s ease, background-color .35s ease;
 	-o-transition: color .35s ease, background-color .35s ease;
@@ -14411,7 +14411,7 @@ a:focus {
 }
 
 .showcase_slider .swiper-button-prev::before {
-	content: "\F060";
+	content: "\f104";
 }
 
 .showcase_slider .swiper-button-next {
@@ -14419,7 +14419,7 @@ a:focus {
 }
 
 .showcase_slider .swiper-button-next::before {
-	content: "\F061";
+	content: "\f105";
 }
 
 .showcase_slider .slide-image {
@@ -14434,7 +14434,7 @@ a:focus {
 	right: 0;
 	left: 0;
 	padding: 9px 15px;
-	background-color: #ffffff;
+	background-color: #e6e2d7;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -14446,24 +14446,17 @@ a:focus {
 
 .showcase_slider .slide-title a {
 	font-size: 20px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: bold;
 	letter-spacing: .2px;
 	line-height: 1.15;
 	text-decoration: none;
-	color: #111;
 	-webkit-transition: color .35s ease;
 	-o-transition: color .35s ease;
 	transition: color .35s ease;
-	text-transform: lowercase;
 }
 
 .showcase_slider .slide-category a {
-	color: #000;
-	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	letter-spacing: .2px;
-	opacity: .4;
 	-webkit-transition: color .35s ease, opacity .35s ease;
 	-o-transition: color .35s ease, opacity .35s ease;
 	transition: color .35s ease, opacity .35s ease;
@@ -18789,4 +18782,8 @@ span.wpcf7-not-valid-tip {
 	.align-left {
 		text-align: left !important;
 	}
+}
+
+.portfolio-slider-wrap .slide-image {
+	height: 600px;
 }

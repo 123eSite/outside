@@ -679,7 +679,7 @@
                 autoplay: autoPlayVar,
                 autoHeight: autoHeightVar, // Set to true and slider wrapper will adopt its height to the height of the currently active slide
                 centeredSlides: centerVar,
-                mousewheelControl: true,
+                mousewheelControl: false,
                 effect: effectVar || 'slide',
                 direction: mode || 'horizontal',
                 slidesPerView: slidesPerViewVar,
