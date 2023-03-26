@@ -10684,22 +10684,20 @@ a:focus {
 	font-style: normal;
 	border-left: none;
 	margin-bottom: 55px;
-	padding: 0 20px;
-	color: #3D3D3D;
+	font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #3D3D3D;
+    background: #e6e2d7;
+    display: table;
+    padding: 12px 20px;
 }
 
 .post-detailed .prague-post-content blockquote p {
-	position: relative;
-	font-size: 33px;
-	line-height: 40px;
-	font-weight: 700;
-	color: #3D3D3D;
-	padding: 78px 0 42px 0;
 	margin-bottom: 0;
-	z-index: 30;
 }
 
-.post-detailed .prague-post-content blockquote p:before {
+/* .post-detailed .prague-post-content blockquote p:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -10724,7 +10722,7 @@ a:focus {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	color: #3D3D3D;
-}
+} */
 
 .post-detailed .prague-post-content a {
 	color: #3D3D3D;
