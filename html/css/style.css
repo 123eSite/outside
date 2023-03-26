@@ -10302,6 +10302,7 @@ a:focus {
 	line-height: inherit;
 	font-weight: inherit;
 	color: inherit;
+	text-transform: uppercase;
 }
 
 .prague-blog-grid-wrapper .blog-grid-post-title a:hover {
@@ -14937,12 +14938,13 @@ a:focus {
 .woocommerce div.product form.cart .button {
 	padding: 22px 50px 22px 15px;
 	border: 1px solid #f2f2f2;
-	background-color: white;
+	background-color: transparent;
 	color: #3D3D3D;
 	line-height: 19px;
 	background-image: url(../img/arrow-btn.png);
 	background-repeat: no-repeat;
 	background-position: 93% 50%;
+	margin-top: 30px;
 }
 
 .woocommerce div.product form.cart .button:hover {
@@ -15097,15 +15099,16 @@ a:focus {
 
 .woocommerce div.product p.price,
 .woocommerce-page div.product p.price {
-	margin-bottom: 28px;
-	font-size: 62px;
-	font-weight: 500;
-	line-height: 65px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 24px;
 }
 
 .woocommerce div.product p.price .woocommerce-Price-currencySymbol,
 .woocommerce-page div.product p.price .woocommerce-Price-currencySymbol {
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 400;
 	vertical-align: super;
 }
@@ -15292,6 +15295,8 @@ a:focus {
 
 .woocommerce div.product form.cart div.quantity {
 	margin: 0 20px 0 0;
+	float: none;
+	width: 100px;
 }
 
 .woocommerce div.product form.cart .variations {
@@ -15954,9 +15959,14 @@ a:focus {
 	margin-bottom: 75px;
 	padding-left: 15px;
 }
+.woocommerce.single-product .flex-item {
+	gap: 30px;
+}
 
 .woocommerce div.product .product_title {
 	margin-bottom: 0;
+	font-size: 40px;
+	margin-top: 30px;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
