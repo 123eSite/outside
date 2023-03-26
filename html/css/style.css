@@ -12820,22 +12820,29 @@ a:focus {
 }
 
 .project-detail-picture-wrapper {
-	text-align: center;
+
 }
 
 .project-detail-picture-wrapper img {
 	max-width: 100%;
-	margin-bottom: 30px;
+	margin:0 auto 30px;
+	display: block;
 }
 
 .project-detail-picture-wrapper .project-detail-picture-descr {
-	text-align: center;
 	padding: 10% 24% 10% 9.3%;
-	color: #7e7d7d;
+}
+.project-detail-picture-wrapper a.blog-grid-link {
+    margin-left: 20px;
 }
 
 .project-detail-picture-wrapper .project-detail-picture-descr p {
 	margin-bottom: 32px;
+}
+
+.project-detail-picture-wrapper .project-detail-picture-descr h2.title.big {
+	font-size: 40px;
+	line-height: 40px;
 }
 
 @media only screen and (max-width: 991px) {
