@@ -173,6 +173,7 @@ a:focus {
 	margin-left: -15px !important;
 }
 
+
 @media only screen and (max-width: 991px) {
 	h1 {
 		font-size: 34px;
@@ -661,6 +662,11 @@ a:focus {
 .arrow-right.grey:before,
 .arrow-right.grey:after {
 	background-color: #7e7d7d;
+}
+
+.row.justify-content-center {
+	display: flex;
+	justify-content: center;
 }
 
 /*-------------------------------------------------------*/
@@ -8497,9 +8503,9 @@ a:focus {
 }
 
 .project-masonry-wrapper .project-masonry-item-img-link:hover .project-masonry-item-content {
-	-webkit-transform: translateY(-10px);
-	-ms-transform: translateY(-10px);
-	transform: translateY(-10px);
+	-webkit-transform: translateY(-40px);
+	-ms-transform: translateY(-40px);
+	transform: translateY(-40px);
 	-webkit-transition-delay: .15s;
 	-o-transition-delay: .15s;
 	transition-delay: .15s;
@@ -8544,11 +8550,10 @@ a:focus {
 .project-masonry-wrapper .project-masonry-item-content {
 	position: absolute;
 	left: 0;
-	bottom: -10px;
+	bottom: -20px;
 	max-width: 80%;
-	background-color: #F6F5EC;
-	padding-top: 25px;
-	padding-right: 40px;
+	background-color: rgba(246, 245, 236, 0.7);
+	padding: 14px;
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
 	transform: translateY(100%);
@@ -8576,6 +8581,8 @@ a:focus {
 	margin-bottom: 0;
 	font-weight: 500;
 	line-height: 26px;
+	text-transform: uppercase;
+	color: #fff;
 }
 .menu-footer .project-masonry-wrapper .project-masonry-item-title {
 	font-size: 18px;
@@ -10754,10 +10761,9 @@ a:focus {
 	flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: space-between;
-	background-color: #f2f2f2;
+	justify-content: flex-end;
 	margin-top: 60px;
-	padding: 37px 50px 30px 50px;
+	padding: 0;
 }
 
 .post-detailed .prague-post-info .prague-authot-info,
@@ -10899,7 +10905,7 @@ a:focus {
 }
 
 .post-comments .heading {
-	padding: 65px 0 54px 0;
+	padding: 10px 0 54px 0;
 }
 
 .post-comments .prague-comments-list {
@@ -10907,7 +10913,7 @@ a:focus {
 }
 
 .post-comments .prague-comments-list ul {
-	max-width: 91%;
+	max-width: 100%;
 }
 
 .post-comments .prague-comments-list ul ul {
@@ -10935,6 +10941,7 @@ a:focus {
 	display: flex;
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
+	width: 100%;
 }
 
 .post-comments .prague-comments-list .comm-block .comm-img {
@@ -10944,7 +10951,7 @@ a:focus {
 
 .post-comments .prague-comments-list .comm-block .comm-txt {
 	position: relative;
-	width: calc(100% - 100px);
+	width: calc(100% - 30px);
 	padding-left: 30px;
 }
 
@@ -11194,7 +11201,7 @@ a:focus {
 }
 
 .det-tags {
-	margin-top: 60px;
+	margin-top: 10px;
 }
 
 .det-tags h4 {
