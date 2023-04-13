@@ -1,0 +1,10 @@
+# WP dirs.
+wp/app/public/.php
+wp/app/public/.txt
+wp/app/public/.html
+wp/app/public/.htaccess
+wp/app/public/wp-admin/*
+wp/app/public/wp-includes/*
+wp/app/public/wp-snapshots/*
+wp/conf/*
+wp/logs/*
