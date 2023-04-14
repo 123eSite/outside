@@ -5132,6 +5132,9 @@ a:focus {
 .prague-footer .prague-social-nav {
     float: right;
 }
+.grid-post-page {
+	padding-bottom: 100px;
+}
 @media only screen and (max-width: 1199px) {
 	.prague-footer .footer-content-outer {
 		padding: 100px 0;

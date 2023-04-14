@@ -8,7 +8,11 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
             <div class="item slider-img overlay element2 active">
-                <img src="<?php bloginfo('template_url'); ?>/img/slider2.jpg" alt="slider image"  class="s-img-switch ">
+                <?php
+                $attachment_id = get_field('imagem_banner');
+                $imagem = wp_get_attachment_image_src( $attachment_id, 'carrossel' );
+                ?>
+                <img src="<?php echo $imagem[0]; ?>" alt="slider image"  class="s-img-switch ">
             </div>
         </div>
     </div>
@@ -19,10 +23,11 @@
         <div class="column column_container col-sm-12 ">
             <div class="column-inner ">
                 <div class="heading  Center dark">
-                    <div class="subtitle ">ABOUT ME</div>
-                    <h2 class="title uppercase">hey outsiders, <img width="165" src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" alt="">  here!</h2>
+                    <div class="subtitle "><?php the_field('subtitulo_sobre'); ?></div>
+                    <h2 class="title uppercase"><?php the_field('titulo_1_sobre'); ?> 
+                    <img width="165" src="<?php the_field('logo_sobre'); ?>" alt="">  <?php the_field('titulo_2_sobre'); ?></h2>
                     <div class="content">
-                        <p>Welcome to my world, sou mais do que uma marca, sou um lifestyle cheio ​de experiências, uma nova forma de expressão trazendo um novo olhar e ​perspectiva para o mundo digital.</p>
+                        <?php the_field('texto_sobre'); ?>
                     </div>
                 </div>
             </div>
@@ -33,100 +38,70 @@
                     <div class="column-inner ">
                         <div class="wrapper">
                             <div class="heading  Center dark">
-                                <div class="subtitle ">LATEST  CONTENTS</div>
+                                <div class="subtitle "><?php the_field('titulo_noticias'); ?></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row prague-blog-grif-outer js-load-more-block">
+                <?php if(have_rows('lista_noticias')) : while(have_rows('lista_noticias')) : the_row(); ?>
                 <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-interior category-uncategorized tag-creative tag-interior tag-modern blog-post col-sm-4 col-xs-12 js-filter-simple-block">
                     <div class="prague-blog-grid-wrapper">
                         <div class="blog-grid-img">
-                            <img src="<?php bloginfo('template_url'); ?>/img/blog1.jpg" class="s-img-switch" alt="blog image" />
+                            <?php
+                            $attachment_id = get_sub_field('imagem');
+                            $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-ultm-conteudos' );
+                            ?>
+                            <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_sub_field('titulo'); ?>">
                         </div>
                         <div class="blog-grid-content">
                             <div class="blog-grid-post-date">
-                                Fevereiro, 2023.
+                                <?php the_sub_field('data'); ?>
                             </div>
-                            <h3 class="blog-grid-post-title"><a href="#">PATAGÔNIA</a></h3>
+                            <h3 class="blog-grid-post-title"><a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('titulo'); ?></a></h3>
                             <div class="blog-grid-post-excerpt">
-                                <p>A Patagônia é uma viagem para ir em casal, em família, com amigos, com o parceiro(a), com quem quiser. Tudo é válido, uma viagem romântica com aventura, natureza, gastronomia, e um pouco de perigo (cuidado com a puma). (..).</p>
+                                <p><?php the_sub_field('resumo'); ?></p>
                             </div>
-                            <a href="#" class="blog-grid-link a-btn-arrow-2">
+                            <a href="<?php the_sub_field('link'); ?>" class="blog-grid-link a-btn-arrow-2">
                                 <span class="arrow-right"></span>
                                 READ MORE
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-interior category-uncategorized tag-creative tag-interior tag-modern blog-post col-sm-4 col-xs-12 js-filter-simple-block">
-                    <div class="prague-blog-grid-wrapper">
-                        <div class="blog-grid-img">
-                            <img src="<?php bloginfo('template_url'); ?>/img/blog2.jpg" class="s-img-switch" alt="blog image" />
-                        </div>
-                        <div class="blog-grid-content">
-                            <div class="blog-grid-post-date">
-                                Janeiro, 2023.
-                            </div>
-                            <h3 class="blog-grid-post-title"><a href="#">MILA SP</a></h3>
-                            <div class="blog-grid-post-excerpt">
-                                <p>O restaurante Mila é um italiano descolado e diferenciado localizado no Itaim, sou suspeita para falar porque italiano é meu top 3, e o Mila ganhou meu coração! (...).</p>
-                            </div>
-                            <a href="#" class="blog-grid-link a-btn-arrow-2">
-                                <span class="arrow-right"></span>
-                                READ MORE
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-interior category-uncategorized tag-creative tag-interior tag-modern blog-post col-sm-4 col-xs-12 js-filter-simple-block">
-                    <div class="prague-blog-grid-wrapper">
-                        <div class="blog-grid-img">
-                            <img src="<?php bloginfo('template_url'); ?>/img/blog3.jpg" class="s-img-switch" alt="blog image" />
-                        </div>
-                        <div class="blog-grid-content">
-                            <div class="blog-grid-post-date">
-                                Dezembro, 2022.
-                            </div>
-                            <h3 class="blog-grid-post-title"><a href="#">DROP/0001</a></h3>
-                            <div class="blog-grid-post-excerpt">
-                                <p>Um dos meus pilares principais é a sustentabilidade e a preocupação com o meio ambiente, aqui vou contar para vocês algumas curiosidades sobre meus drops e como você pode adquiri-los 😉 (...)</p>
-                            </div>
-                            <a href="#" class="blog-grid-link a-btn-arrow-2">
-                                <span class="arrow-right"></span>
-                                READ MORE
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; endif; ?>
             </div>
         </div>
     </div>
 </div>
+<?php $count=2; if(have_rows('lista_destaques')) : while(have_rows('lista_destaques')) : the_row(); ?>
+<?php if($count%2 == 0) : ?>
 <div class="container no-padd margin margin-xs-20b">
     <div class="row-fluid no-padd ">
         <div class="heading dark smaller">
-            <h2 class="title">Time to travel!</h2>
+            <h2 class="title"><?php the_sub_field('titulo_chamada'); ?></h2>
             <div class="content">
-                <p>Viagens com aventura, natureza, entretenimento,
-                    gastronomia, cultura e muito mais.</p>
+                <p><?php the_sub_field('texto_chamada'); ?></p>
             </div>
         </div>
         <div class="col-sm-12 no-padd padd-only-small padd-only-md no-padd-lg">
             <div class="about-section-classic padd-only-small padd-only-md no-padd-lg">
                 <div class="about-section__img">
-                    <img src="<?php bloginfo('template_url'); ?>/img/time-to-travel.jpg" class="s-img-switch" alt="banner image">
-                    <span class="grad-word">t</span>
+                    <?php
+                    $attachment_id = get_sub_field('imagem');
+                    $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-viaje' );
+                    ?>
+                    <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_sub_field('titulo'); ?>">
+                    <span class="grad-word"><?php the_sub_field('letra_imagem'); ?></span>
                 </div>
                 <div class="content">
-                    <div class="subtitle">Novembro, 2022.</div>
-                    <h2 class="title">PATAGÔNIA</h2>
-                    <p>Um dos meus pilares principais é viagem, seja para o Brasil ou ao redor do 🌎... Produções de conteúdos, marcas parceiras, outsiders aventureiros e muito mais.</p>
-                    <p>Minha última viagem foi para Patagônia, um lugar maravilhoso, com marcas incríveis, muita aventura e cultura. Quer saber mais do meu roteiro, dos perrengues e dicas?</p>
+                    <div class="subtitle"><?php the_sub_field('data'); ?></div>
+                    <h2 class="title"><?php the_sub_field('titulo'); ?></h2>
+                    <p><?php the_sub_field('resumo'); ?></p>
                     <div class="but-wrap">
-                        <a href="#" class="a-btn-arrow-2  creative anima" target="blank">
-                            read more <span class="arrow-right"></span>
+                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima" target="blank">
+                            <?php the_sub_field('titulo_botao'); ?> <span class="arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -134,37 +109,43 @@
         </div>
     </div>
 </div>
+<?php else : ?>
 <div class="container right no-padd margin margin-sm-50b margin-xs-20b">
     <div class="row-fluid no-padd ">
         <div class="heading dark smaller">
-            <h2 class="title">Nothing Basic</h2>
+            <h2 class="title"><?php the_sub_field('titulo_chamada'); ?></h2>
             <div class="content">
-                <p>O slow fashion e o consumo consciente é algo que quero transmitir com peças atemporais, sustentáveis, exclusivas e para qualquer ocasião</p>
+                <p><?php the_sub_field('texto_chamada'); ?></p>
             </div>
         </div>
         <div class="col-sm-12 no-padd padd-only-small padd-only-md no-padd-lg">
             <div class="about-section-classic padd-only-small padd-only-md no-padd-lg">
                 <div class="content">
-                    <div class="subtitle">Março, 2023.</div>
-                    <h2 class="title">DROP/0001</h2>
-                    <p>A sustentabilidade e a preocupação com o meio ambiente, é algo que faz parte dos meus valores, com isso trarei para vocês coleções cápsulas (famosos drops), com peças exclusivas e de uso infinito.
-                        </p>
-                        <p>Não é sempre que terei drops, então fiquem sempre de olho! Seja uma outsider e me mande sua fotinho usando o look e apareça nas minhas redes sociais 😃.</p>
+                    <div class="subtitle"><?php the_sub_field('data'); ?></div>
+                    <h2 class="title"><?php the_sub_field('titulo'); ?></h2>
+                    <p><?php the_sub_field('resumo'); ?></p>
                     <div class="but-wrap">
-                        <a href="#" class="a-btn-arrow-2  creative anima" target="blank">
-                            shop now <span class="arrow-right"></span>
+                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima" target="blank">
+                            <?php the_sub_field('titulo_botao'); ?> <span class="arrow-right"></span>
                         </a>
                     </div>
                 </div>
                 <div class="about-section__img">
-                    <img src="<?php bloginfo('template_url'); ?>/img/slider1.jpg" class="s-img-switch" alt="banner image">
-                    <span class="grad-word">n</span>
+                    <?php
+                    $attachment_id = get_sub_field('imagem');
+                    $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-viaje' );
+                    ?>
+                    <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_sub_field('titulo'); ?>">
+                    <span class="grad-word"><?php the_sub_field('letra_imagem'); ?></span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container no-padd margin margin-sm-50b margin-xs-20b">
+<div class="container right no-padd margin margin-lg-55b margin-sm-50b margin-xs-20b"></div>
+<?php endif; ?>
+<?php $count++; endwhile; endif; ?>
+<!-- <div class="container no-padd margin margin-sm-50b margin-xs-20b">
     <div class="row-fluid no-padd ">
         <div class="heading dark smaller">
             <h2 class="title">Lunch<br> Time</h2>
@@ -223,5 +204,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <?php get_footer(); ?>

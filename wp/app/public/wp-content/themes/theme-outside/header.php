@@ -39,25 +39,25 @@
                         <nav>
                             <ul class="main-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">Home</a>
+                                    <a href="<?php bloginfo('url'); ?>">Home</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">TRAVEL TIME</a>
+                                    <a href="<?php bloginfo('url'); ?>/travel-time/">TRAVEL TIME</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">NOTHING BASIC</a>
+                                    <a href="<?php bloginfo('url'); ?>/nothing-basic/">NOTHING BASIC</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                     <a href="#">SOCIAL MIDIA</a>
-                                </li>
+                                </li> -->
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">HEY NUTRI</a>
+                                    <a href="<?php bloginfo('url'); ?>/hey-nutri/">HEY NUTRI</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                     <a href="#">WORKOUT</a>
-                                </li>
+                                </li> -->
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">BRUNCH TIME</a>
+                                    <a href="<?php bloginfo('url'); ?>/brunch-time/">BRUNCH TIME</a>
                                 </li>
                             </ul>
                         </nav>
@@ -78,22 +78,22 @@
             <div class="prague-social-nav">
                 <ul class="social-content">
                     <li>
-                        <a target="_blank" href="https://www.behance.net/foxthemes">
+                        <a target="_blank" href="<?php the_field('instagram','options'); ?>">
                             <i aria-hidden="true" class="fa fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/foxthemes.page/">
+                        <a target="_blank" href="<?php the_field('facebook','options'); ?>">
                             <i aria-hidden="true" class="fa fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://twitter.com/foxthemes_offic">
+                        <a target="_blank" href="<?php the_field('linkedin','options'); ?>">
                             <i aria-hidden="true" class="fa fa-linkedin"></i>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.pinterest.com/foxthemes/">
+                        <a target="_blank" href="<?php the_field('pinterest','options'); ?>">
                             <i aria-hidden="true" class="fa fa-pinterest-p"></i>
                         </a>
                     </li>

@@ -92,7 +92,6 @@
 
     <!-- START FOOTER -->
     <footer class="prague-footer default">
-
         <img src="#" class="s-img-switch" alt="footer banner" />
         <div class="footer-content-outer">
             <div class="footer-top-content">
@@ -102,54 +101,48 @@
                             <img src="#" width="250" data-lazy-src="<?php bloginfo('template_url'); ?>/img/hey-outside.co.png" class="attachment-full size-full"  alt="logo" />
                         </a>
                     </div>
-
                     <div class="footer-main-content">
                         <p>CNPJ -  48.240.025/0001-99<br>OUTSIDE.CO (C) 2022 ALL RIGHTS RESERVED</p>
                     </div>
-
                 </div>
                 <div class="prague-footer-info-block">
-
-                    <img src="#" width="180" data-lazy-src="<?php bloginfo('template_url'); ?>/img/slogan.png" class="attachment-full size-full"
+                    <img src="<?php bloginfo('url'); ?>" width="180" data-lazy-src="<?php bloginfo('template_url'); ?>/img/slogan.png" class="attachment-full size-full"
                                 alt="logo" />
 
                     <div class="footer-info-block-content">
-                        <p><a href="tel:+7(885)5896985">+55 11 99464-1443 </a>
-                        <a href="mailto:beatriz@outsideco.com.br">parcerias@outsideco.com.br</a>
-                        São Paulo, Brasil</p>
+                        <p><a href="tel:<?php the_field('telefone','options'); ?>"><?php the_field('telefone','options'); ?> </a>
+                        <a href="mailto:<?php the_field('email','options'); ?>"><?php the_field('email','options'); ?></a>
+                        <?php the_field('endereco','options'); ?></p>
                     </div>
                     <!--SOCIAL-->
-            <div class="prague-social-nav">
-                <ul class="social-content">
-                    <li>
-                        <a target="_blank" href="https://www.behance.net/foxthemes">
-                            <i aria-hidden="true" class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/foxthemes.page/">
-                            <i aria-hidden="true" class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://twitter.com/foxthemes_offic">
-                            <i aria-hidden="true" class="fa fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.pinterest.com/foxthemes/">
-                            <i aria-hidden="true" class="fa fa-pinterest-p"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--/SOCIAL-->
-
+                    <div class="prague-social-nav">
+                        <ul class="social-content">
+                            <li>
+                                <a target="_blank" href="<?php the_field('instagram','options'); ?>">
+                                    <i aria-hidden="true" class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="<?php the_field('facebook','options'); ?>">
+                                    <i aria-hidden="true" class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="<?php the_field('linkedin','options'); ?>">
+                                    <i aria-hidden="true" class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="<?php the_field('pinterest','options'); ?>">
+                                    <i aria-hidden="true" class="fa fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/SOCIAL-->
                 </div>
             </div>
-
         </div>
-
     </footer>
     <!--/END FOOTER-->
 
@@ -169,7 +162,7 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/banner_slider.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/revolution-slider.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.magnific-popup.min.js"></script>
-    <?php get_footer(); ?>
+    <?php wp_footer(); ?>
 </body>
 
 </html>

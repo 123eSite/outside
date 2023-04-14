@@ -137,7 +137,9 @@ function add_slug_body_class( $classes ) {
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'carrossel', 1920, 794, true);
     add_image_size( 'capa-ultm-conteudos', 500, 333, true);
-    add_image_size( 'capa-viaje', 527, 288, true);    
+    add_image_size( 'capa-viaje', 527, 288, true);
+    add_image_size( 'carrossel-padrao', 1037, 692, true);
+    add_image_size( 'capa-padrao', 527, 340, true);
 }
 
 /* Options Tema */
@@ -555,3 +557,18 @@ function clean($string) {
     return str_replace(["-", "–"], '', $string);
     // Removes special chars.
  }
+
+ function add_post_template_selector() {
+    global $post;
+    $page_template = get_post_meta( $post->ID, '_wp_page_template', true );
+    ?>
+    <label class="screen-reader-text" for="page_template"><?php _e( 'Modelo de página', 'textdomain' ); ?></label>
+    <select name="page_template" id="page_template">
+        <option value="default"><?php _e( 'Padrão', 'textdomain' ); ?></option>
+        <?php page_template_dropdown( $page_template ); ?>
+    </select>
+    <?php
+}
+add_action( 'edit_form_after_title', 'add_post_template_selector' );
+
+
