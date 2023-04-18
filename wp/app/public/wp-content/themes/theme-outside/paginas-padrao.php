@@ -70,63 +70,53 @@
             data-responsive="responsive" data-slides-per-view="4" data-xs-slides="1,0"
             data-sm-slides="2,0" data-md-slides="3,0" data-lg-slides="4,0">
             <div class="swiper-wrapper">
+                <?php
+                $cat_id = $cat;
+                $args = array(
+                    'cat' => 5,
+                    'posts_per_page' => -1, 
+                );
+                $query = new WP_Query( $args );
+                ?>
+                <?php if ( $query->have_posts() ) : ?>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                 <div class="swiper-slide">
                     <div class="slide-image">
                         <span class="images-slider-wrapper">
-                            <img src="<?php bloginfo('template_url'); ?>/img/restaurante1.jpg" alt="seascape-villa image" class="s-img-switch">
+                            <?php
+                            $attachment_id = get_field('imagem');
+                            $imagem = wp_get_attachment_image_src( $attachment_id, 'carrossel-viagens' );
+                            ?>
+                            <img src="<?php echo $imagem[0]; ?>" class="s-img-switch">
                         </span>
                     </div>
                     <div class="content-showcase-wrapper ">
-                        <div class="slide-title"><a href="#" target="_self">Nome do Restaurante</a></div>
-                        <div class="slide-category"><a href="#" rel="tag">Buenos Aires, Argentina</a></div>
+                        <div class="slide-title"><a href="<?php the_permalink(); ?>" target="_self"><?php the_title(); ?></a></div>
+                        <div class="slide-category"><a href="<?php the_permalink(); ?>" rel="tag"><?php the_field('descricao'); ?></a></div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slide-image">
-                        <span class="images-slider-wrapper">
-                            <img src="<?php bloginfo('template_url'); ?>/img/restaurante2.jpg" alt="seascape-villa image" class="s-img-switch">
-                        </span>
-                    </div>
-                    <div class="content-showcase-wrapper ">
-                        <div class="slide-title"><a href="#" target="_self">Nome do Restaurante</a></div>
-                        <div class="slide-category"><a href="#" rel="tag">Buenos Aires, Argentina</a></div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-image">
-                        <span class="images-slider-wrapper">
-                            <img src="<?php bloginfo('template_url'); ?>/img/restaurante3.jpg" alt="seascape-villa image" class="s-img-switch">
-                        </span>
-                    </div>
-                    <div class="content-showcase-wrapper ">
-                        <div class="slide-title"><a href="#" target="_self">Nome do Restaurante</a></div>
-                        <div class="slide-category"><a href="#" rel="tag">Buenos Aires, Argentina</a></div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-image">
-                        <span class="images-slider-wrapper">
-                            <img src="<?php bloginfo('template_url'); ?>/img/restaurante4.jpg" alt="seascape-villa image" class="s-img-switch">
-                        </span>
-                    </div>
-                    <div class="content-showcase-wrapper ">
-                        <div class="slide-title"><a href="#" target="_self">Nome do Restaurante</a></div>
-                        <div class="slide-category"><a href="#" rel="tag">Buenos Aires, Argentina</a></div>
-                    </div>
-                </div>
+                <?php endwhile; wp_reset_postdata(); endif; ?>
             </div>
             <div class="swiper-button-prev swiper-buttons"></div>
             <div class="swiper-button-next swiper-buttons"></div>
         </div>
     </div>
     <?php else :  ?>
-    
     <div class="row-fluid">
         <div class="col-sm-12 no-padd">
             <div class=" no-padd-xs">
                 <div class="project-detail-block-outer invert">
+                    <?php if(is_page('travel-time')) {
+                        $cat = 2;
+                    } elseif(is_page('nothing-basic')) {
+                        $cat = 3;
+                    }
+                    elseif(is_page('hey-nutri')) {
+                        $cat = 4;
+                    }
+                    ?>
                     <?php
-                    $cat_id = 2;
+                    $cat_id = $cat;
                     $args = array(
                         'cat' => $cat_id,
                         'posts_per_page' => -1, 
@@ -143,7 +133,7 @@
                                     </a>
                                 <div class="project-detail-block-descr">
                                     <p>
-                                        Novembro, 2022.
+                                        <?php echo get_the_date('d M'); ?> de <?php echo get_the_date('Y'); ?>
                                     </p>
                                 </div>
                             </div>
@@ -155,3 +145,59 @@
     </div>
     <?php endif; ?>
 </div>
+<?php if(is_page('hey-nutri')) : ?>
+<div class="container no-padd">
+    <div class=" row-fluid   margin-sm-0t">
+        <div class="col-md-12 js-load-more margin-sm-50t margin-lg-70b margin-sm-30b" data-unique-key="blog-posts" data-start-page="1" data-max-page="2" data-next-link="blog-page-2.html">
+            <div class="row-fluid">
+                    <div class="column column_container col-sm-12 margin-lg-20b">
+                            <div class="column-inner ">
+                                    <div class="wrapper">
+                                            <div class="heading  Center dark">
+                                                    <div class="subtitle ">LATEST  CONTENTS</div>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="row prague-blog-grif-outer js-load-more-block">
+                <?php
+                $cat_id = $cat;
+                $args = array(
+                    'cat' => 7,
+                    'posts_per_page' => 3, 
+                );
+                $query = new WP_Query( $args );
+                ?>
+                <?php if ( $query->have_posts() ) : ?>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-interior category-uncategorized tag-creative tag-interior tag-modern blog-post col-sm-4 col-xs-12 js-filter-simple-block">
+                    <div class="prague-blog-grid-wrapper">
+                        <div class="blog-grid-img">
+                            <?php
+                            $attachment_id = get_field('imagem');
+                            $imagem = wp_get_attachment_image_src( $attachment_id, 'list-to-travel-1' );
+                            ?>
+                            <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="blog image" />
+                        </div>
+                        <div class="blog-grid-content">
+                            <div class="blog-grid-post-date">
+                            <?php echo get_the_date('d M'); ?> de <?php echo get_the_date('Y'); ?>
+                            </div>
+                            <h3 class="blog-grid-post-title"><a href="#"><?php the_title(); ?></a></h3>
+                            <div class="blog-grid-post-excerpt">
+                                <p><?php the_field('descricao'); ?></p>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" class="blog-grid-link a-btn-arrow-2">
+                                <span class="arrow-right"></span>
+                                READ MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; wp_reset_postdata(); endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

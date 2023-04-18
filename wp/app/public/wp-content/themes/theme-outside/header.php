@@ -37,29 +37,8 @@
                 <div class="pargue-navigation-wrapper">
                     <div class="prague-navigation-inner">
                         <nav>
-                            <ul class="main-menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="<?php bloginfo('url'); ?>">Home</a>
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="<?php bloginfo('url'); ?>/travel-time/">TRAVEL TIME</a>
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="<?php bloginfo('url'); ?>/nothing-basic/">NOTHING BASIC</a>
-                                </li>
-                                <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">SOCIAL MIDIA</a>
-                                </li> -->
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="<?php bloginfo('url'); ?>/hey-nutri/">HEY NUTRI</a>
-                                </li>
-                                <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">WORKOUT</a>
-                                </li> -->
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="<?php bloginfo('url'); ?>/brunch-time/">BRUNCH TIME</a>
-                                </li>
-                            </ul>
+                            <?php wp_nav_menu(array('menu'=> 2, 'menu_class' => 'main-menu', 'container' => '')); ?>
+                            
                         </nav>
                     </div>
                 </div>

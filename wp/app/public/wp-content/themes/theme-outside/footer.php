@@ -2,86 +2,27 @@
         <div class="container-fluid">
             <div class="wpb_column vc_column_container col-sm-12 no-padd  margin-lg-35t margin-sm-20t margin-lg-50b">
                 <div class="vc_column-inner ">
-                    <div class="row prague_masonry prague_count_col6 prague_gap_col10 no-footer-content prague-load-wrapper"
-                        data-columns="prague_count_col6" data-gap="prague_gap_col15">
+                    <div class="row prague_masonry prague_count_col4 prague_gap_col10 no-footer-content prague-load-wrapper"
+                        data-columns="prague_count_col4" data-gap="prague_gap_col15">
+                        <?php if(have_rows('lista_menu_footer','options')) : while(have_rows('lista_menu_footer','options')) : the_row(); ?>
                         <div class="portfolio-item-wrapp">
                             <div class="portfolio-item">
                                 <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu1.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
+                                    <a class="project-masonry-item-img-link" href="<?php the_sub_field('link'); ?>" target="_self">
+                                        <?php
+                                        $attachment_id = get_sub_field('imagem');
+                                        $imagem = wp_get_attachment_image_src( $attachment_id, 'menu-footer' );
+                                        ?>
+                                        <img src="<?php echo $imagem[0]; ?>"  class="s-img-switch wp-post-image" alt="<?php the_sub_field('titulo'); ?>" data-s-hidden="true" data-s-sibling="true" />
                                         <div class="project-masonry-item-img"></div>
                                         <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">TRAVEL TIME</h4>
+                                            <h4 class="project-masonry-item-title"><?php the_sub_field('titulo'); ?></h4>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-item-wrapp">
-                            <div class="portfolio-item">
-                                <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu2.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
-                                        <div class="project-masonry-item-img"></div>
-                                        <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">NOTHING BASIC</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-wrapp">
-                            <div class="portfolio-item">
-                                <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu3.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
-                                        <div class="project-masonry-item-img"></div>
-                                        <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">SOCIAL MIDIA</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-wrapp">
-                            <div class="portfolio-item">
-                                <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu4.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
-                                        <div class="project-masonry-item-img"></div>
-                                        <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">HEY NUTRI</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-wrapp">
-                            <div class="portfolio-item">
-                                <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu5.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
-                                        <div class="project-masonry-item-img"></div>
-                                        <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">WORKOUT</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-wrapp">
-                            <div class="portfolio-item">
-                                <div class="project-masonry-wrapper">
-                                    <a class="project-masonry-item-img-link" href="#" target="_self">
-                                        <img width="605" height="807" src="<?php bloginfo('template_url'); ?>/img/menu6.jpg"  class="s-img-switch wp-post-image" alt="" data-s-hidden="true" data-s-sibling="true" />
-                                        <div class="project-masonry-item-img"></div>
-                                        <div class="project-masonry-item-content">
-                                            <h4 class="project-masonry-item-title">BRUNCH TIME</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endwhile; endif; ?>
                     </div>
                 </div>
             </div>

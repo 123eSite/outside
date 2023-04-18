@@ -143,6 +143,14 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'banner-to-travel', 1920, 581, true);
     add_image_size( 'list-to-travel-1', 350, 230, true);
     add_image_size( 'list-to-travel-2', 350, 360, true);
+    add_image_size( 'fashion-1', 396, 399, true);
+    add_image_size( 'fashion-2', 402, 409, true);
+    add_image_size( 'fashion-3', 280, 346, true);
+    add_image_size( 'fashion-4', 279, 376, true);
+    add_image_size( 'imagem-astral', 376, 564, true);
+    add_image_size( 'carrossel-viagens', 585, 712, true);
+    add_image_size( 'menu-footer', 350, 240, true);
+
 }
 
 /* Options Tema */
@@ -374,20 +382,16 @@ function  addSharePost($link, $titulo/*, $imagem*/) {
     $str = '';
 
     //facebook
-    $str .= '<a class="blog-one__share" original-title="FACEBOOK" href="http://www.facebook.com/sharer.php?u=' . urlencode( $link ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><i class="fab fa-facebook"></i></a>';
+    $str .= '<a class="icon fa fa-facebook" original-title="FACEBOOK" href="http://www.facebook.com/sharer.php?u=' . urlencode( $link ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"></a>';
 
     //twitter
-    $str .= '<a class="blog-one__share" original-title="TWITTER" href="https://twitter.com/intent/tweet?text=' . urlencode( strip_tags( $titulo ) ) . '&amp;url=' . urlencode( $link ) . '&amp;via=' . urlencode( $twitter_user ? $twitter_user : get_bloginfo( 'name' ) ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><i class="fab fa-twitter"></i></a>';
-
-    //google plus
-    /*$str .= '<a original-title="GOOGLE" href="http://plus.google.com/share?url=' . urlencode( $link ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><i class="fab fa-google"></i></a>';*/
-
-    //pinterest
-    /*$str .= '<a original-title="PINTEREST" href="http://pinterest.com/pin/create/button/?url=' . urlencode( $link ) . '&amp;media=' . ( ! empty( $imagem ) ? $imagem : '' ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><i class="fa fa-pinterest"></i></a>';*/
+    $str .= '<a class="icon fa fa-twitter" original-title="TWITTER" href="https://twitter.com/intent/tweet?text=' . urlencode( strip_tags( $titulo ) ) . '&amp;url=' . urlencode( $link ) . '&amp;via=' . urlencode( $twitter_user ? $twitter_user : get_bloginfo( 'name' ) ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"></a>';
 
     //linkedin
-    $str .= '<a class="blog-one__share" original-title="LINKEDIN" href="http://linkedin.com/shareArticle?mini=true&amp;url=' . urlencode( $link ) . '&amp;title=' . urlencode( strip_tags( $titulo ) ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><i class="fab fa-linkedin-in"></i></a>';
+    $str .= '<a class="icon fa fa-linkedin" original-title="LINKEDIN" href="http://linkedin.com/shareArticle?mini=true&amp;url=' . urlencode( $link ) . '&amp;title=' . urlencode( strip_tags( $titulo ) ) . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"></a>';
 
+    //whatsapp
+    $str .= '<a class="icon fa fa-whatsapp" original-title="WHATSAPP" href="whatsapp://send?text=' . urlencode( $titulo . ' ' . $link ) . '" data-action="share/whatsapp/share"></a>';
 
     return $str;
 }
