@@ -38,7 +38,7 @@
                     $attachment_id = get_field('imagem_tema');
                     $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-padrao' );
                     ?>
-                    <img src="<?php bloginfo('template_url'); ?>/img/time-to-travel2.jpg" class="s-img-switch" alt="banner image">
+                    <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="banner image">
                     <span class="grad-word"><?php the_field('letra_imagem_tema'); ?></span>
                 </div>
                 <div class="content text-right">
@@ -120,46 +120,36 @@
         </div>
     </div>
     <?php else :  ?>
+    
     <div class="row-fluid">
         <div class="col-sm-12 no-padd">
             <div class=" no-padd-xs">
                 <div class="project-detail-block-outer invert">
+                    <?php
+                    $cat_id = 2;
+                    $args = array(
+                        'cat' => $cat_id,
+                        'posts_per_page' => -1, 
+                    );
+                    $query = new WP_Query( $args );
+                    ?>
+                    <?php if ( $query->have_posts() ) : ?>
+                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                     <div class="project-detail-block-wrapper">
                         <div class="project-detail-block-item">
+                            <a href="<?php the_permalink(); ?>">
                             <div class="project-detail-block-title">
-                                PATAGÔNIA </div>
-                            <div class="project-detail-block-descr">
-                                <p>
-                                    Novembro, 2022.
-                                </p>
+                                        <?php the_title(); ?> </div>
+                                    </a>
+                                <div class="project-detail-block-descr">
+                                    <p>
+                                        Novembro, 2022.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="project-detail-block-wrapper">
-                        <div class="project-detail-block-item">
-                            <div class="project-detail-block-title">
-                                ITÁLIA </div>
-                            <div class="project-detail-block-descr">
-                                <p>
-                                    Novembro, 2022.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-detail-block-wrapper">
-                        <div class="project-detail-block-item">
-                            <div class="project-detail-block-title">
-                                HAVAÍ </div>
-                            <div class="project-detail-block-descr">
-                                <p>
-                                    Novembro, 2022.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php endwhile; wp_reset_postdata(); endif; ?>
                 </div>
-
             </div>
         </div>
     </div>

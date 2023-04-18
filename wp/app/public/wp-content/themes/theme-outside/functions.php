@@ -140,6 +140,9 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'capa-viaje', 527, 288, true);
     add_image_size( 'carrossel-padrao', 1037, 692, true);
     add_image_size( 'capa-padrao', 527, 340, true);
+    add_image_size( 'banner-to-travel', 1920, 581, true);
+    add_image_size( 'list-to-travel-1', 350, 230, true);
+    add_image_size( 'list-to-travel-2', 350, 360, true);
 }
 
 /* Options Tema */
@@ -550,25 +553,36 @@ function force_ssl()
 }
 //force_ssl();
 
+// Adicionar seletor de modelo de página em postagens
+/* function add_post_template_selector() {
+    add_meta_box(
+        'pageparentdiv',
+        __('Modelo de página'),
+        'post_template_meta_box',
+        'post',
+        'side',
+        'default'
+    );
+}
+add_action( 'add_meta_boxes', 'add_post_template_selector' ); */
 
-function clean($string) {
-    $string = str_replace(' ', '', $string); // Replaces all spaces with hyphens.
-
-    return str_replace(["-", "–"], '', $string);
-    // Removes special chars.
- }
-
- function add_post_template_selector() {
-    global $post;
-    $page_template = get_post_meta( $post->ID, '_wp_page_template', true );
+// Exibir seletor de modelo de página
+/* function post_template_meta_box( $post ) {
+    $template = get_post_meta( $post->ID, '_wp_page_template', true );
     ?>
-    <label class="screen-reader-text" for="page_template"><?php _e( 'Modelo de página', 'textdomain' ); ?></label>
+    <label class="screen-reader-text" for="page_template"><?php _e('Modelo de página') ?></label>
     <select name="page_template" id="page_template">
-        <option value="default"><?php _e( 'Padrão', 'textdomain' ); ?></option>
-        <?php page_template_dropdown( $page_template ); ?>
+        <option value="default"><?php _e('Padrão') ?></option>
+        <?php page_template_dropdown( $template ); ?>
     </select>
     <?php
+} */
+
+// Atualizar modelo de página em postagens
+/* function save_post_template( $post_id ) {
+    if ( isset( $_POST['page_template'] ) && !empty( $_POST['page_template'] ) ) {
+        update_post_meta( $post_id, '_wp_page_template', $_POST['page_template'] );
+    }
 }
-add_action( 'edit_form_after_title', 'add_post_template_selector' );
-
-
+add_action( 'save_post', 'save_post_template' );
+ */
