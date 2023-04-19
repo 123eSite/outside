@@ -103,6 +103,7 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/banner_slider.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/revolution-slider.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/fullscreen-projets-masonry.js"></script>
     <?php wp_footer(); ?>
 </body>
 

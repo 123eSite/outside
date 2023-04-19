@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/unit-test.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?v=9">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fullscreen-projects.css">
     <?php wp_head(); ?>
 </head>
 

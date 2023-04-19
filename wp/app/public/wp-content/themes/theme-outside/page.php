@@ -5,8 +5,8 @@
     <?php get_template_part('paginas-padrao'); ?>
 <?php elseif(is_page('receitas')) : ?>
     <?php get_template_part('receitas'); ?>
-<?php elseif(is_page('noticias-pesquisa')) : ?>
-    <?php get_template_part('noticias-pesquisa'); ?>
+<?php elseif(is_page('portifolio')) : ?>
+    <?php get_template_part('portifolio'); ?>
 <?php else : ?>
     <?php get_template_part('padrao'); ?>
 <?php endif; ?>

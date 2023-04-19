@@ -47,7 +47,7 @@
                                             <img  src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_title(); ?>" data-s-hidden="true" data-s-sibling="true"/>
                                             <div class="project-masonry-item-img"></div>
                                             <div class="project-masonry-item-content">
-                                                <h4 class="project-masonry-item-title"><?php if($count%3 == 0) : ?> aaa<?php endif; ?><?php the_sub_field('titulo'); ?></h4>
+                                                <h4 class="project-masonry-item-title"><?php if($count%3 == 0) : ?><?php endif; ?><?php the_sub_field('titulo'); ?></h4>
                                             </div>
                                         </a>
                                     </div>
