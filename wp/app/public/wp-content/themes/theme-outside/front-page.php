@@ -3,8 +3,12 @@
 <div class="row-fluid no-padd">
     <div class="col-sm-12 no-padd">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
-            <img src="<?php bloginfo('template_url'); ?>/img/slogan.png" width="180" class="image_slogan" alt="logo" />
+            <a href="<?php bloginfo('url'); ?>">
+                <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+            </a>
+            <a href="<?php bloginfo('url'); ?>">
+                <img src="<?php bloginfo('template_url'); ?>/img/slogan.png" width="180" class="image_slogan" alt="logo" />
+            </a>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
             <div class="item slider-img overlay element2 active">
@@ -100,7 +104,7 @@
                     <h2 class="title"><?php the_sub_field('titulo'); ?></h2>
                     <p><?php the_sub_field('resumo'); ?></p>
                     <div class="but-wrap">
-                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima" target="blank">
+                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima">
                             <?php the_sub_field('titulo_botao'); ?> <span class="arrow-right"></span>
                         </a>
                     </div>
@@ -125,7 +129,7 @@
                     <h2 class="title"><?php the_sub_field('titulo'); ?></h2>
                     <p><?php the_sub_field('resumo'); ?></p>
                     <div class="but-wrap">
-                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima" target="blank">
+                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima">
                             <?php the_sub_field('titulo_botao'); ?> <span class="arrow-right"></span>
                         </a>
                     </div>

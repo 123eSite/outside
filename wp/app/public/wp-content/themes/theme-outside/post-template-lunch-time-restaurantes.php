@@ -10,7 +10,9 @@
 
 <!--MAIN BODY-->
 <section class="head-pages">
-    <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+</a>
 </section>
 
 <div class="container no-padd margin-lg-50b">

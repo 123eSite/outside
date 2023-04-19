@@ -15183,7 +15183,7 @@ nav.woocommerce-breadcrumb {
     font-weight: 500;
     line-height: 40px;
     margin-top: 24px;
-	color: #000!important;
+	color: #3D3D3D!important;
 }
 
 .woocommerce div.product p.price .woocommerce-Price-currencySymbol,
@@ -16564,11 +16564,13 @@ nav.woocommerce-breadcrumb {
 .banner-slider-wrap.andra .s-back-switch {
 	background-position: center;
 	background-size: cover;
-	min-height: 400px;
-	max-height: 90vh;
-	height: auto !important;
+	max-height: 400px;
+	max-height: 400px;
+	height: 400px !important;
 }
-
+.banner-slider-wrap.andra .s-back-switch img {
+	height: 400px;
+}
 .banner-slider-wrap.andra .swiper-pagination {
 	position: static;
 	margin-top: 30px;
@@ -18888,3 +18890,8 @@ span.wpcf7-not-valid-tip {
 .portfolio-slider-wrap .slide-image {
 	height: 600px;
 }
+
+a:focus, a:hover {
+	color: #7e7d7d!important;
+}
+

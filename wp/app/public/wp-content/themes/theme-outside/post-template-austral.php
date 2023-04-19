@@ -9,7 +9,9 @@
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <!--MAIN BODY-->
     <section class="head-pages" style="background: #3D3D3D;">
+    <a href="<?php bloginfo('url'); ?>">
         <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" style="filter: brightness(0)invert(1);">
+</a>
     </section>
 
     <div class="container margin-lg-50t margin-lg-90b margin-sm-50b padd-only-xs">

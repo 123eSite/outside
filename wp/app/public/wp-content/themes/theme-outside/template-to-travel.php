@@ -8,7 +8,9 @@
 <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <section class="head-pages">
-    <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    </a>
 </section>
 <div class="banner">
     <?php

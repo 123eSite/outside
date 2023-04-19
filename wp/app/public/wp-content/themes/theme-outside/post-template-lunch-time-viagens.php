@@ -10,8 +10,10 @@
 
     <!--MAIN BODY-->
     <section class="head-pages">
+    <a href="<?php bloginfo('url'); ?>">
         <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
-    </section>
+    </a>
+</section>
 
     <div class="banner">
         <?php

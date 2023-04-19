@@ -1,6 +1,8 @@
 <!--MAIN BODY-->
 <section class="head-pages">
-    <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    </a>
 </section>
 
 <div class="container-fluid no-padd  margin-lg-120b margin-sm-80b margin-xs-50b">
@@ -126,18 +128,18 @@
                     <?php if ( $query->have_posts() ) : ?>
                     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                     <div class="project-detail-block-wrapper">
+                        <a href="<?php the_permalink(); ?>">
                         <div class="project-detail-block-item">
-                            <a href="<?php the_permalink(); ?>">
-                            <div class="project-detail-block-title">
-                                        <?php the_title(); ?> </div>
-                                    </a>
-                                <div class="project-detail-block-descr">
-                                    <p>
-                                        <?php echo get_the_date('d M'); ?> de <?php echo get_the_date('Y'); ?>
-                                    </p>
+                        <div class="project-detail-block-title">
+                                    <?php the_title(); ?> </div>
+                                    <div class="project-detail-block-descr">
+                                        <p>
+                                            <?php echo get_the_date('d M'); ?> de <?php echo get_the_date('Y'); ?>
+                                        </p>
+                                    </div>
                                 </div>
+                            </a>
                             </div>
-                        </div>
                     <?php endwhile; wp_reset_postdata(); endif; ?>
                 </div>
             </div>

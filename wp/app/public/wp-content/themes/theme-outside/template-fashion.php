@@ -9,7 +9,9 @@
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <!--MAIN BODY-->
 <section class="head-pages">
-    <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    </a>
 </section>
 <?php
 $attachment_id = get_field('imagem_banner_topo');
