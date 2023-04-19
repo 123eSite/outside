@@ -64,43 +64,97 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 </div>
-<div class="shop-container container padd-only-xs product-template-default single single-product postid-2072 woocommerce woocommerce-page woocommerce-no-js wpb-js-composer js-comp-ver-5.6 responsive">
-	<div class="row justify-content-center">
-		<div class="col-sm-12 col-md-9 margin-lg-90b margin-sm-60b">
-			<div class="woocommerce-notices-wrapper"></div>
-			<div id="product-2072" class="post-2072 product type-product status-publish has-post-thumbnail product_cat-acssessories product_tag-casual product_tag-modern first instock virtual purchasable product-type-simple">
-				<div class="flex-item ">
-					<div class="summary entry-summary">
-						<?php
-						/**
-						 * Hook: woocommerce_single_product_summary.
-						 *
-						 * @hooked woocommerce_template_single_title - 5
-						 * @hooked woocommerce_template_single_rating - 10
-						 * @hooked woocommerce_template_single_price - 10
-						 * @hooked woocommerce_template_single_excerpt - 20
-						 * @hooked woocommerce_template_single_add_to_cart - 30
-						 * @hooked woocommerce_template_single_meta - 40
-						 * @hooked woocommerce_template_single_sharing - 50
-						 * @hooked WC_Structured_Data::generate_product_data() - 60
-						 */
-						do_action( 'woocommerce_single_product_summary' );
-						?>
-					</div>
-					<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-3 images"
-						data-columns="3">
-						<div class="flex-viewport">
-							<figure class="woocommerce-product-gallery__wrapper">
-								<div class="woocommerce-product-gallery__image flex-active-slide">
-									<?php the_post_thumbnail( 'produto' ); ?>
-								</div>
-							</figure>
+	<div class="shop-container container padd-only-xs product-template-default single single-product postid-2072 woocommerce woocommerce-page woocommerce-no-js wpb-js-composer js-comp-ver-5.6 responsive">
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-md-9 margin-lg-90b margin-sm-60b">
+				<div class="woocommerce-notices-wrapper"></div>
+				<div id="product-2072" class="post-2072 product type-product status-publish has-post-thumbnail product_cat-acssessories product_tag-casual product_tag-modern first instock virtual purchasable product-type-simple">
+					<div class="flex-item ">
+						<div class="summary entry-summary">
+							<?php
+							/**
+							 * Hook: woocommerce_single_product_summary.
+							 *
+							 * @hooked woocommerce_template_single_title - 5
+							 * @hooked woocommerce_template_single_rating - 10
+							 * @hooked woocommerce_template_single_price - 10
+							 * @hooked woocommerce_template_single_excerpt - 20
+							 * @hooked woocommerce_template_single_add_to_cart - 30
+							 * @hooked woocommerce_template_single_meta - 40
+							 * @hooked woocommerce_template_single_sharing - 50
+							 * @hooked WC_Structured_Data::generate_product_data() - 60
+							 */
+							do_action( 'woocommerce_single_product_summary' );
+							?>
+						</div>
+						<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-3 images"
+							data-columns="3">
+							<div class="flex-viewport">
+								<figure class="woocommerce-product-gallery__wrapper">
+									<div class="woocommerce-product-gallery__image flex-active-slide">
+										<?php the_post_thumbnail( 'produto' ); ?>
+									</div>
+								</figure>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div><!-- #product-2074 -->
+				</div><!-- #product-2074 -->
+			</div>
 		</div>
 	</div>
-</div>
+	<div class="container no-padd margin-lg-100b margin list-icons-custom">
+        <div class="row-fluid">
+            <div class="col-sm-12 no-padd">
+                <div class=" no-padd-xs">
+                    <div class="project-detail-block-outer invert">
+                        <div class="project-detail-block-wrapper">
+                            <div class="project-detail-block-item">
+								<div class="icon">
+									<i class="fa fa-comments-o" aria-hidden="true"></i>
+								</div>
+                                <div class="project-detail-block-title">
+                                    POLÍTICA DE <br>TROCA </div>
+                                <div class="project-detail-block-descr">
+                                    <p>
+                                       read more
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-detail-block-wrapper">
+                            <div class="project-detail-block-item">
+								<div class="icon">
+									<i class="fa fa-credit-card" aria-hidden="true"></i>
+								</div>
+                                <div class="project-detail-block-title">
+                                    FORMAS DE <br>PAGAMENTOS </div>
+                                <div class="project-detail-block-descr">
+									<p>
+                                       read more
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-detail-block-wrapper">
+                            <div class="project-detail-block-item">
+								<div class="icon">
+									<i class="fa fa-truck" aria-hidden="true"></i>
+								</div>
+                                <div class="project-detail-block-title">
+                                    FORMAS DE <br> ENVIO </div>
+                                <div class="project-detail-block-descr">
+									<p>
+                                       read more
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php do_action( 'woocommerce_after_single_product' ); ?>

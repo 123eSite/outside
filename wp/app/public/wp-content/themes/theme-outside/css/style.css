@@ -7136,10 +7136,10 @@ a:focus {
 .commentlist {
 	margin-bottom: 50px;
 }
-h3#reply-title {
+/* h3#reply-title {
     right: 25px;
     position: relative;
-}
+} */
 h3#comments {
     margin-bottom: 30px;
 }
@@ -7151,8 +7151,47 @@ h3#comments {
     font-size: 13px;
     color: #7e7d7d;
 }
+.comment-respond h3 a{
+	color: #3D3D3D!important;
+	font-weight: 500;
+} 
 nav.woocommerce-breadcrumb {
     display: none;
+}
+.container.margin-lg-50t.margin-lg-90b.margin-sm-50b.padd-only-xs .navigation {
+    display: none;
+}
+.list-icons-custom .project-detail-block-outer .project-detail-block-wrapper .project-detail-block-item {
+    text-align: center;
+    height: 100%;
+    background-color: #e6e2d7;
+    padding: 40px;
+}
+.list-icons-custom .project-detail-block-outer.invert .project-detail-block-wrapper .project-detail-block-descr:before {
+    content: '';
+    position: absolute;
+    bottom: -73px;
+    right: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translate(-50%, 30px);
+    width: 1px;
+    height: 50px;
+    background-color: #3D3D3D;
+}
+.list-icons-custom .project-detail-block-outer .project-detail-block-wrapper .project-detail-block-descr p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.list-icons-custom .icon i {
+    font-size: 50px;
+    margin-bottom: 20px;
+	color: #7e7d7d;
+}
+.list-icons-custom .project-detail-block-outer.invert .project-detail-block-wrapper .project-detail-block-title {
+    font-size: 16px;
+    line-height: 2;
 }
 .prague-formidable .frm_forms.with_frm_style .frm_compact .frm_dropzone.dz-clickable .dz-message,
 .prague-formidable .frm_forms.with_frm_style input[type=submit],
@@ -17406,9 +17445,14 @@ span.wpcf7-not-valid-tip {
 	position: relative;
 	clear: both;
 	margin-bottom: 15px;
-	top: -15px;
+	top: 5px;
 }
-
+span.wpcf7-spinner {
+    position: absolute;
+}
+ol.commentlist {
+    list-style: none;
+}
 .wpcf7 * {
 	text-transform: none;
 }
