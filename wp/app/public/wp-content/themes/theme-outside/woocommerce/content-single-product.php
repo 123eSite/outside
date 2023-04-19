@@ -35,7 +35,9 @@ if ( post_password_required() ) {
 
 <!--MAIN BODY-->
 <section class="head-pages">
-	<img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+	<a href="<?php bloginfo('url'); ?>">
+		<img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+	</a>
 </section>
 
 <div class="container-fluid no-padd  margin-lg-120b margin-sm-80b margin-xs-50b">
