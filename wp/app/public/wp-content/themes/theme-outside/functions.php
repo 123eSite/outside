@@ -150,7 +150,7 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'imagem-astral', 376, 564, true);
     add_image_size( 'carrossel-viagens', 585, 712, true);
     add_image_size( 'menu-footer', 350, 240, true);
-
+    add_image_size( 'produto', 335, 418, true);
 }
 
 /* Options Tema */
@@ -590,3 +590,17 @@ add_action( 'add_meta_boxes', 'add_post_template_selector' ); */
 }
 add_action( 'save_post', 'save_post_template' );
  */
+ /* -------------- WOOCOMMERCE -------------- */
+
+// Adiciona suporte ao Woocommerce
+
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
+// Alterar o texto do botão adicionar ao carrinho */
+function woo_custom_cart_button_text() {
+    return __( 'ADICIONAR AO CARRINHO', 'woocommerce' );
+}
+ add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );   // 2.1 +

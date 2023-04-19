@@ -7151,6 +7151,9 @@ h3#comments {
     font-size: 13px;
     color: #7e7d7d;
 }
+nav.woocommerce-breadcrumb {
+    display: none;
+}
 .prague-formidable .frm_forms.with_frm_style .frm_compact .frm_dropzone.dz-clickable .dz-message,
 .prague-formidable .frm_forms.with_frm_style input[type=submit],
 .prague-formidable .frm_forms.with_frm_style .frm_button_submit,
@@ -15176,19 +15179,26 @@ h3#comments {
 .woocommerce div.product p.price,
 .woocommerce-page div.product p.price {
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 30px!important;
     font-weight: 500;
     line-height: 40px;
     margin-top: 24px;
+	color: #000!important;
 }
 
 .woocommerce div.product p.price .woocommerce-Price-currencySymbol,
 .woocommerce-page div.product p.price .woocommerce-Price-currencySymbol {
 	font-size: 28px;
 	font-weight: 400;
-	vertical-align: super;
 }
-
+.woocommerce div.product form.cart .button {
+    position: absolute;
+    left: 0;
+    margin-top: 80px;
+}
+.product_meta {
+    display: none;
+}
 @media only screen and (max-width: 767px) {
 
 	.woocommerce div.product p.price,
