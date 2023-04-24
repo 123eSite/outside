@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/before-after.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/unit-test.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?v=9">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?v=11">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fullscreen-projects.css">
     <?php wp_head(); ?>
 </head>
@@ -56,7 +56,7 @@
                     <div class="prague-navigation-inner">
                         <nav>
                             <?php wp_nav_menu(array('menu'=> 2, 'menu_class' => 'main-menu', 'container' => '')); ?>
-                            
+
                         </nav>
                     </div>
                 </div>

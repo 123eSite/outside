@@ -40,7 +40,7 @@
                     $attachment_id = get_field('imagem_tema');
                     $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-padrao' );
                     ?>
-                    <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="banner image">
+                    <img class="s-img-switch" src="<?php echo $imagem[0]; ?>" alt="banner image">
                     <span class="grad-word"><?php the_field('letra_imagem_tema'); ?></span>
                 </div>
                 <div class="content text-right">
@@ -76,7 +76,7 @@
                 $cat_id = $cat;
                 $args = array(
                     'cat' => 5,
-                    'posts_per_page' => -1, 
+                    'posts_per_page' => -1,
                 );
                 $query = new WP_Query( $args );
                 ?>
@@ -121,7 +121,7 @@
                     $cat_id = $cat;
                     $args = array(
                         'cat' => $cat_id,
-                        'posts_per_page' => -1, 
+                        'posts_per_page' => -1,
                     );
                     $query = new WP_Query( $args );
                     ?>
@@ -167,7 +167,7 @@
                 $cat_id = $cat;
                 $args = array(
                     'cat' => 7,
-                    'posts_per_page' => 3, 
+                    'posts_per_page' => 3,
                 );
                 $query = new WP_Query( $args );
                 ?>

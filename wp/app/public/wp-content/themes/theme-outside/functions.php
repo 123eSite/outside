@@ -137,9 +137,9 @@ function add_slug_body_class( $classes ) {
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'carrossel', 1920, 794, true);
     add_image_size( 'capa-ultm-conteudos', 500, 333, true);
-    add_image_size( 'capa-viaje', 527, 288, true);
-    add_image_size( 'carrossel-padrao', 803, 400, true);
-    add_image_size( 'capa-padrao', 527, 340, true);
+    add_image_size( 'capa-viaje', 800, 437, true);
+    add_image_size( 'carrossel-padrao', 1000, 498, true);
+    add_image_size( 'capa-padrao', 800, 516, true);
     add_image_size( 'banner-to-travel', 1920, 581, true);
     add_image_size( 'list-to-travel-1', 350, 230, true);
     add_image_size( 'list-to-travel-2', 350, 360, true);

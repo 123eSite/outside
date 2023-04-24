@@ -1,0 +1,27 @@
+{
+    "remotePath": "/public_html/site/wp-content/themes/theme-outside",
+    "host": "102.165.25.14",
+    "username": "123esite@outsideco.com.br",
+    "password": "kCRxZO9U!*5X",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}
