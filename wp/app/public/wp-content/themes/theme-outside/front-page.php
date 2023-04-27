@@ -80,8 +80,40 @@
     </div>
 </div>
 <?php $count=2; if(have_rows('lista_destaques')) : while(have_rows('lista_destaques')) : the_row(); ?>
+<div class="container no-padd margin margin-xs-20b desktop-none">
+    <div class="row-fluid no-padd ">
+        <div class="heading dark smaller">
+            <h2 class="title"><?php the_sub_field('titulo_chamada'); ?></h2>
+            <div class="content">
+                <p><?php the_sub_field('texto_chamada'); ?></p>
+            </div>
+        </div>
+        <div class="col-sm-12 no-padd padd-only-small padd-only-md no-padd-lg">
+            <div class="about-section-classic padd-only-small padd-only-md no-padd-lg">
+                <div class="about-section__img">
+                    <?php
+                    $attachment_id = get_sub_field('imagem');
+                    $imagem = wp_get_attachment_image_src( $attachment_id, 'capa-viaje' );
+                    ?>
+                    <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_sub_field('titulo'); ?>">
+                    <span class="grad-word"><?php the_sub_field('letra_imagem'); ?></span>
+                </div>
+                <div class="content">
+                    <div class="subtitle"><?php the_sub_field('data'); ?></div>
+                    <h2 class="title"><?php the_sub_field('titulo'); ?></h2>
+                    <p><?php the_sub_field('resumo'); ?></p>
+                    <div class="but-wrap">
+                        <a href="<?php the_sub_field('link_botao'); ?>" class="a-btn-arrow-2  creative anima">
+                            <?php the_sub_field('titulo_botao'); ?> <span class="arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php if($count%2 == 0) : ?>
-<div class="container no-padd margin margin-xs-20b">
+<div class="container no-padd margin margin-xs-20b mobile-none">
     <div class="row-fluid no-padd ">
         <div class="heading dark smaller">
             <h2 class="title"><?php the_sub_field('titulo_chamada'); ?></h2>
@@ -114,7 +146,7 @@
     </div>
 </div>
 <?php else : ?>
-<div class="container right no-padd margin margin-sm-50b margin-xs-20b">
+<div class="container right no-padd margin margin-sm-50b margin-xs-20b mobile-none">
     <div class="row-fluid no-padd ">
         <div class="heading dark smaller">
             <h2 class="title"><?php the_sub_field('titulo_chamada'); ?></h2>

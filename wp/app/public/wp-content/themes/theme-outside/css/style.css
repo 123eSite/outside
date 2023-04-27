@@ -7154,7 +7154,7 @@ h3#comments {
 .comment-respond h3 a{
 	color: #3D3D3D!important;
 	font-weight: 500;
-}
+} 
 nav.woocommerce-breadcrumb {
     display: none;
 }
@@ -16894,7 +16894,7 @@ nav.woocommerce-breadcrumb {
 
 	.about-section-classic .grad-word {
 		left: -10px;
-		font-size: 90px;
+		font-size: 120px;
 	}
 
 	.about-section-classic .subtitle {
@@ -18937,4 +18937,66 @@ ol.commentlist {
 
 a:focus, a:hover {
 	color: #7e7d7d!important;
+}
+
+.desktop-none {
+	display: none;
+}
+
+@media screen and (max-width: 1199px) {
+	.mobile-none {
+		display: none;
+	}
+	.desktop-none {
+		display: block;
+	}
+	.about-section-classic .content {
+		padding-left: 0;
+		margin-top: 20px;
+	}
+	.about-section-classic .content:before {
+		display: none;
+	}
+	.project-masonry-wrapper .project-masonry-item-img-link .project-masonry-item-content {
+		-webkit-transform: translateY(-40px);
+		-ms-transform: translateY(-40px);
+		transform: translateY(-40px);
+		-webkit-transition-delay: .15s;
+		-o-transition-delay: .15s;
+		transition-delay: .15s;
+	}
+	.revenues {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (max-width: 768px) {
+	.container.no-padd.margin.margin-xs-20b.desktop-none {
+		padding: 0 15px;
+	}
+	.container.no-padd.margin.margin-xs-20b.desktop-none .heading,.container.no-padd.margin.margin-xs-20b.desktop-none .about-section-classic .content {
+		text-align: left;
+	}
+	.about-mobile .row-fluid.margin-lg-75t.margin-sm-40t {
+		margin: 0;
+	}
+	.prague_masonry.prague_count_col4 .portfolio-item-wrapp .project-masonry-wrapper {
+		max-width: 100%;
+	}
+	.prague-footer .footer-top-content .prague-footer-main-block .footer-main-content p, .prague-footer-info-block .footer-info-block-content p {
+		text-align: center;
+	}
+	.prague-footer .prague-social-nav {
+		float: unset;
+	}
+	.prague-footer .prague-social-nav ul.social-content {
+		justify-content: center;
+	}
+	.revenues {
+		grid-template-columns: 1fr;
+		padding: 0 15px;
+	}
+	.container.no-padd.margin-lg-60t.margin-lg-100b.margin.receitas {
+		margin-top: 0;
+		margin-bottom: 60px;
+	}
 }

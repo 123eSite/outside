@@ -4,7 +4,7 @@
         <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
     </a>
 </section>
-<div class="container no-padd margin-lg-60t margin-lg-100b margin">
+<div class="container no-padd margin-lg-60t margin-lg-100b margin receitas">
     <div class="revenues">
         <?php
         $cat_id = $cat;
