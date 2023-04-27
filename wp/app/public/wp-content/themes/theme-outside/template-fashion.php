@@ -30,7 +30,7 @@ $imagem = wp_get_attachment_image_src( $attachment_id, 'banner-to-travel' );
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mobile-none">
         <div class="col-md-9">
             <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
                 <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
@@ -72,8 +72,41 @@ $imagem = wp_get_attachment_image_src( $attachment_id, 'banner-to-travel' );
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <?php endif; ?>
                     <?php $count++; endwhile; endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center desktop-none">
+        <div class="col-md-9">
+            <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
+                <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
+                    <div class="no-padd-inner ">
+                        <div class="project-detail-picture-wrapper ">
+                                <div class="project-detail-picture-descr text-right">
+                                    <h2 class="title big"><?php the_field('titulo_publicacao'); ?></h2>
+                                    <?php the_field('texto_1_publicacao'); ?>
+                                </div>
+                                <div class="project-detail-picture-descr">
+                                    <?php the_field('texto_2_publicacao'); ?>
+                                </div>
+                                <?php $count=1; if(have_rows('lista_publicacao')) : while(have_rows('lista_publicacao')) : the_row(); ?>
+                                <?php
+                                $attachment_id = get_sub_field('imagem');
+                                $imagem = wp_get_attachment_image_src( $attachment_id, 'fashion-'.$count );
+                                ?>
+                                <img src="<?php echo $imagem[0]; ?>" alt="">
+                                <?php endwhile; endif; ?>
+                                <?php if(get_field('titulo_botao_publicacao')) : ?>
+                                <a href="<?php the_field('link_botao_publicacao'); ?>" class="blog-grid-link a-btn-arrow-2">
+                                    <span class="arrow-right"></span>
+                                    <?php the_field('titulo_botao_publicacao'); ?>
+                                </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

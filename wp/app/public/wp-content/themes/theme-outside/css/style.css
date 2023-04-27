@@ -18969,6 +18969,15 @@ a:focus, a:hover {
 		grid-template-columns: 1fr 1fr;
 	}
 }
+.row.justify-content-center.desktop-none {
+	display: none;
+}
+.content-area .woocommerce .quantity .qty {
+    width: 60px;
+    padding: 0;
+    border: 1px solid #715c5c;
+    text-align: center;
+}
 @media screen and (max-width: 768px) {
 	.container.no-padd.margin.margin-xs-20b.desktop-none {
 		padding: 0 15px;
@@ -18998,5 +19007,33 @@ a:focus, a:hover {
 	.container.no-padd.margin-lg-60t.margin-lg-100b.margin.receitas {
 		margin-top: 0;
 		margin-bottom: 60px;
+	}
+	.row.justify-content-center.mobile-none {
+		display: none;
+	}
+	.row.justify-content-center.desktop-none {
+		display: flex;
+		margin-top: -160px;
+	}
+	.project-detail-picture-wrapper .project-detail-picture-descr h2.title.big br {
+		display: none;
+	}
+	.project-detail-picture-wrapper .project-detail-picture-descr h2.title.big {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.project-detail-picture-wrapper .project-detail-picture-descr {
+		padding: 0;
+	}
+	.row.justify-content-center.desktop-none .project-detail-picture-wrapper img {
+		width: 100%;
+		max-width: 100%;
+		margin: 10px 0;
+		display: block;
+	}
+	.row.justify-content-center.desktop-none .project-detail-picture-wrapper a.blog-grid-link {
+		margin-left: 20px;
+		font-size: 20px;
+		margin: 30px 0 60px;
 	}
 }

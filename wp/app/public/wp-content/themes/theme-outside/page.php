@@ -8,7 +8,16 @@
 <?php elseif(is_page('portifolio')) : ?>
     <?php get_template_part('portifolio'); ?>
 <?php else : ?>
-    <?php get_template_part('padrao'); ?>
+<section class="head-pages">
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+    </a>
+</section>
+    <div class="site-main  main-container no-sidebar">
+    <div class="container">
+        <?php the_content(); ?>
+    </div>
+</div>
 <?php endif; ?>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>

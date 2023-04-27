@@ -2250,7 +2250,7 @@
         $('figure a').attr('href', 'img/bertt-side-table/shop-img-4-768x946.jpg');
     });
 
-    $('.single_add_to_cart_button').on('click', function (eventObject) {
+    /* $('.single_add_to_cart_button').on('click', function (eventObject) {
         eventObject.preventDefault();
         location.href = 'cart.html'
     });
@@ -2259,7 +2259,7 @@
         eventObject.preventDefault();
         location.href = 'cart.html'
     });
-
+ */
     //wooden-nightstand page //
 
 
