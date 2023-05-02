@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
-
     <!--/MAIN BODY-->
 
     <!-- START FOOTER -->

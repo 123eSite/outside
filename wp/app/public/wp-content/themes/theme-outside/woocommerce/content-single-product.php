@@ -59,6 +59,7 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 </div>
+<div class="container notices-custom">
 <?php
 /**
  * Hook: woocommerce_before_single_product.
@@ -68,6 +69,7 @@ if ( post_password_required() ) {
 do_action( 'woocommerce_before_single_product' );
 
 ?>
+</div>
 	<div class="shop-container container padd-only-xs product-template-default single single-product postid-2072 woocommerce woocommerce-page woocommerce-no-js wpb-js-composer js-comp-ver-5.6 responsive">
 		<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-9 margin-lg-90b margin-sm-60b">

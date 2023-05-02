@@ -8,9 +8,9 @@
 <?php elseif(is_page('portifolio')) : ?>
     <?php get_template_part('portifolio'); ?>
 <?php else : ?>
-<section class="head-pages">
+<section class="head-pages" style="background: #3D3D3D;">
     <a href="<?php bloginfo('url'); ?>">
-        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" />
+        <img src="<?php bloginfo('template_url'); ?>/img/outside.co.svg" width="200" class="image_logo" alt="logo" style="filter: brightness(0)invert(1);">
     </a>
 </section>
     <div class="site-main  main-container no-sidebar">
