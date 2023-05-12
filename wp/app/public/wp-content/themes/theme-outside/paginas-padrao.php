@@ -9,22 +9,22 @@
     <div class="row-fluid no-padd">
         <div class="col-sm-12 no-padd">
             <div class="banner-slider-wrap andra ">
-                <div class="swiper-container swiper  " data-mouse="0" data-autoplay="1" data-loop="1" data-speed="3000"
-                    data-center="1" data-space-between="30" data-pagination-type="fraction" data-mode="horizontal">
+                <div class="swiper-container swiper" data-autoplay="1" data-loop="1" data-speed="3000"
+                   data-space-between="30">
                     <div class="swiper-wrapper">
                         <?php if(have_rows('lista_carrossel')) : while(have_rows('lista_carrossel')) : the_row(); ?>
                         <?php
                         $attachment_id = get_sub_field('imagem');
                         $imagem = wp_get_attachment_image_src( $attachment_id, 'carrossel-padrao' );
                         ?>
-                        <div class="swiper-slide swiper-no-swiping full-height-window-hard">
-                            <img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_title(); ?>">
+                        <div class="swiper-slide">
+                            <img src="<?php echo $imagem[0]; ?>" alt="<?php the_title(); ?>">
                         </div>
                         <?php endwhile; endif; ?>
                     </div>
-                    <div class="pag-wrapper">
+                    <!-- <div class="pag-wrapper">
                         <div class="swiper-pagination"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
             </div>
         </div>
     </div>
-    <?php if(is_page('brunch-time')) : ?>
+    <?php if(is_page('lunch-time')) : ?>
     <div class="portfolio-slider-wrap full_showcase_slider showcase_slider ">
         <div class="swiper-container" data-mouse="0" data-space="0" data-pagination-type="bullets"
             data-mode="horizontal" data-autoplay="5000" data-loop="1" data-speed="1500" data-center="0"

@@ -355,7 +355,7 @@
 
         $('.full-height-window').css('height', (windowH) + 'px');
         $('.full-height-window-min-hard').css('min-height', (windowH - offsetTop) + 'px');
-        $('.full-height-window-hard').css('height', (windowH - offsetTop) + 'px');
+  /*       $('.full-height-window-hard').css('height', (windowH - offsetTop) + 'px'); */
         $('.full-height-window-head-foot').css('height', (windowH - offsetTop - footerH) + 'px');
         $('.middle-height-window-hard').css('height', (windowH - offsetTop) * 0.8 + 'px');
     }

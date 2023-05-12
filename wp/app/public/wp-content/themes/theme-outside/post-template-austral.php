@@ -60,8 +60,9 @@
             </div>
         </div>
     </div>
+    <?php if(get_field('banner_patrocinio')) : ?>
     <div class="banner margin-lg-100t ">
-        <a target="_blank" href="<?php the_field('link_banner_patrocinio'); ?>">
+        <a <?php if(get_field('link_banner_patrocinio')) : ?> target="_blank" href="<?php the_field('link_banner_patrocinio'); ?>" <?php endif; ?>>
             <?php
             $attachment_id = get_field('banner_patrocinio');
             $imagem = wp_get_attachment_image_src( $attachment_id, 'banner-to-travel' );
@@ -69,6 +70,7 @@
             <img src="<?php echo $imagem[0]; ?>" alt="<?php the_title(); ?>">
         </a>
     </div>
+    <?php endif; ?>
     <div class="container margin-lg-90b margin-sm-50b padd-only-xs">
         <div class="row justify-content-center margin-lg-100t">
             <div class="col-sm-7 no-padd">

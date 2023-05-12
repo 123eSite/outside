@@ -33,33 +33,6 @@ if ( post_password_required() ) {
 	</a>
 </section>
 
-<div class="container-fluid no-padd  margin-lg-120b margin-sm-80b margin-xs-50b">
-	<div class="row-fluid no-padd">
-		<div class="col-sm-12 no-padd">
-
-			<div class="banner-slider-wrap andra ">
-				<div class="swiper-container swiper  " data-mouse="0" data-autoplay="0" data-loop="1" data-speed="500"
-					data-center="1" data-space-between="30" data-pagination-type="fraction" data-mode="horizontal">
-					<div class="swiper-wrapper">
-						<?php  $thumb_gallery_ids = $product->get_gallery_attachment_ids(); ?>
-						<?php foreach ($thumb_gallery_ids as $thumb_id) :
-							$imagem = wp_get_attachment_image_src( $thumb_id, 'produto-g' );
-						?>
-						<div class="swiper-slide swiper-no-swiping full-height-window-hard">
-							<img src="<?php echo $imagem[0]; ?>" class="s-img-switch" alt="<?php the_title(); ?>">
-						</div>
-						<?php endforeach; ?>
-					</div>
-					<div class="pag-wrapper">
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-<div class="container notices-custom">
 <?php
 /**
  * Hook: woocommerce_before_single_product.
@@ -69,95 +42,159 @@ if ( post_password_required() ) {
 do_action( 'woocommerce_before_single_product' );
 
 ?>
+
+<?php
+$attachment_id = get_field('imagem_banner_topo');
+$imagem = wp_get_attachment_image_src( $attachment_id, 'banner-to-travel' );
+?>
+<div class="banner">
+    <img src="<?php echo $imagem[0]; ?>" alt="">
 </div>
-	<div class="shop-container container padd-only-xs product-template-default single single-product postid-2072 woocommerce woocommerce-page woocommerce-no-js wpb-js-composer js-comp-ver-5.6 responsive">
-		<div class="row justify-content-center">
-			<div class="col-sm-12 col-md-9 margin-lg-90b margin-sm-60b">
-				<div class="woocommerce-notices-wrapper"></div>
-				<div id="product-2072" class="post-2072 product type-product status-publish has-post-thumbnail product_cat-acssessories product_tag-casual product_tag-modern first instock virtual purchasable product-type-simple">
-					<div class="flex-item ">
-						<div class="summary entry-summary">
-							<?php
-							/**
-							 * Hook: woocommerce_single_product_summary.
-							 *
-							 * @hooked woocommerce_template_single_title - 5
-							 * @hooked woocommerce_template_single_rating - 10
-							 * @hooked woocommerce_template_single_price - 10
-							 * @hooked woocommerce_template_single_excerpt - 20
-							 * @hooked woocommerce_template_single_add_to_cart - 30
-							 * @hooked woocommerce_template_single_meta - 40
-							 * @hooked woocommerce_template_single_sharing - 50
-							 * @hooked WC_Structured_Data::generate_product_data() - 60
-							 */
-							do_action( 'woocommerce_single_product_summary' );
-							?>
-						</div>
-						<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-3 images"
-							data-columns="3">
-							<div class="flex-viewport">
-								<figure class="woocommerce-product-gallery__wrapper">
-									<div class="woocommerce-product-gallery__image flex-active-slide">
-										<?php the_post_thumbnail( 'produto' ); ?>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div><!-- #product-2074 -->
-			</div>
-		</div>
-	</div>
+<div class="container no-padd margin-lg-50t padding-lg-100b">
+    <div class="row">
+        <div class="col-sm-12 col-lg-offset-2 col-lg-8 margin-xs-0b padding-lg-55b">
+            <div class="no-padd simple dark">
+                <div class="content no-marg-bottom text-center">
+                    <div class="subtitle"><?php the_field('subtitulo_publicacao'); ?></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mobile-none">
+        <div class="col-md-9">
+            <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
+                <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
+                    <?php $count=1; if(have_rows('lista_publicacao')) : while(have_rows('lista_publicacao')) : the_row(); ?>
+                    <?php
+                    $attachment_id = get_sub_field('imagem');
+                    $imagem = wp_get_attachment_image_src( $attachment_id, 'fashion-'.$count );
+                    ?>
+                    <?php if($count==1) : ?>
+                    <div class="no-padd-inner ">
+                        <div class="project-detail-picture-wrapper ">
+                            <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full no-margin-bottom padding-left no-padd-xs"
+                                alt="banner image" />
+                                <div class="project-detail-picture-descr">
+                                    <?php the_field('texto_2_publicacao'); ?>
+                                </div>
+                                <?php elseif ($count==2) : ?>
+                                <img src="<?php echo $imagem[0]; ?>" alt="">
+								<?php
+									/**
+									 * Hook: woocommerce_single_product_summary.
+									 *
+									 * @hooked woocommerce_template_single_title - 5
+									 * @hooked woocommerce_template_single_rating - 10
+									 * @hooked woocommerce_template_single_price - 10
+									 * @hooked woocommerce_template_single_excerpt - 20
+									 * @hooked woocommerce_template_single_add_to_cart - 30
+									 * @hooked woocommerce_template_single_meta - 40
+									 * @hooked woocommerce_template_single_sharing - 50
+									 * @hooked WC_Structured_Data::generate_product_data() - 60
+									 */
+									do_action( 'woocommerce_single_product_summary' );
+									?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php elseif ($count==3) : ?>
+                    <div class=" vc_column_container col-sm-6 no-padd">
+                        <div class="no-padd-inner ">
+                            <div class="project-detail-picture-wrapper">
+                                <div class="project-detail-picture-descr text-right">
+                                    <h2 class="title big"><?php the_field('titulo_publicacao'); ?></h2>
+                                    <?php the_field('texto_1_publicacao'); ?>
+                                </div>
+                                <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
+                                <?php else : ?>
+                                    <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    <?php $count++; endwhile; endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center desktop-none">
+        <div class="col-md-9">
+            <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
+                <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
+                    <div class="no-padd-inner ">
+                        <div class="project-detail-picture-wrapper ">
+                                <div class="project-detail-picture-descr text-right">
+                                    <h2 class="title big"><?php the_field('titulo_publicacao'); ?></h2>
+                                    <?php the_field('texto_1_publicacao'); ?>
+                                </div>
+                                <div class="project-detail-picture-descr">
+                                    <?php the_field('texto_2_publicacao'); ?>
+                                </div>
+                                <?php $count=1; if(have_rows('lista_publicacao')) : while(have_rows('lista_publicacao')) : the_row(); ?>
+                                <?php
+                                $attachment_id = get_sub_field('imagem');
+                                $imagem = wp_get_attachment_image_src( $attachment_id, 'fashion-'.$count );
+                                ?>
+                                <img src="<?php echo $imagem[0]; ?>" alt="">
+                                <?php endwhile; endif; ?>
+                               
+									<?php
+									/**
+									 * Hook: woocommerce_single_product_summary.
+									 *
+									 * @hooked woocommerce_template_single_title - 5
+									 * @hooked woocommerce_template_single_rating - 10
+									 * @hooked woocommerce_template_single_price - 10
+									 * @hooked woocommerce_template_single_excerpt - 20
+									 * @hooked woocommerce_template_single_add_to_cart - 30
+									 * @hooked woocommerce_template_single_meta - 40
+									 * @hooked woocommerce_template_single_sharing - 50
+									 * @hooked WC_Structured_Data::generate_product_data() - 60
+									 */
+									do_action( 'woocommerce_single_product_summary' );
+									?>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	<div class="container no-padd margin-lg-100b margin list-icons-custom">
         <div class="row-fluid">
             <div class="col-sm-12 no-padd">
                 <div class=" no-padd-xs">
                     <div class="project-detail-block-outer invert">
+                        <?php $count=1; if(have_rows('lista_info','options')) : while(have_rows('lista_info','options')) : the_row(); ?>
+                        <?php
+                            if($count == 1) {
+                                $icon = "fa fa-comments-o";
+                            }elseif($count == 2) {
+                                $icon = "fa fa-credit-card";
+                            }elseif($count == 3) {
+                                $icon = "fa fa-truck";
+                            }
+                            ?>
                         <div class="project-detail-block-wrapper">
-                            <div class="project-detail-block-item">
-								<div class="icon">
-									<i class="fa fa-comments-o" aria-hidden="true"></i>
-								</div>
-                                <div class="project-detail-block-title">
-                                    POLÍTICA DE <br>TROCA </div>
-                                <div class="project-detail-block-descr">
-                                    <p>
-                                       read more
-                                    </p>
+                            <a href="<?php the_sub_field('link'); ?>">
+                                <div class="project-detail-block-item">
+                                    <div class="icon">
+                                        <i class="<?php echo $icon; ?>" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="project-detail-block-title">
+                                        <?php the_sub_field('titulo'); ?> </div>
+                                    <div class="project-detail-block-descr">
+                                        <p>
+                                           <?php the_sub_field('texto'); ?>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="project-detail-block-wrapper">
-                            <div class="project-detail-block-item">
-								<div class="icon">
-									<i class="fa fa-credit-card" aria-hidden="true"></i>
-								</div>
-                                <div class="project-detail-block-title">
-                                    FORMAS DE <br>PAGAMENTOS </div>
-                                <div class="project-detail-block-descr">
-									<p>
-                                       read more
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-detail-block-wrapper">
-                            <div class="project-detail-block-item">
-								<div class="icon">
-									<i class="fa fa-truck" aria-hidden="true"></i>
-								</div>
-                                <div class="project-detail-block-title">
-                                    FORMAS DE <br> ENVIO </div>
-                                <div class="project-detail-block-descr">
-									<p>
-                                       read more
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php $count++; endwhile; endif; ?>
                     </div>
-
                 </div>
             </div>
         </div>

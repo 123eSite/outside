@@ -16681,7 +16681,29 @@ nav.woocommerce-breadcrumb {
 	margin: 0 7px;
 	background-color: #dfdede;
 }
-
+h1.product_title.entry-title {
+	display: none;
+}
+.site-main.padrao-page.main-container.no-sidebar {
+    padding: 70px 0;
+}
+.site-main.padrao-page.main-container.no-sidebar h1 {
+    margin-bottom: 30px;
+}
+.product p.price {
+    font-size: 28px;
+    font-weight: 400;
+    vertical-align: super;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+}
+.quantity {
+	max-width: 80px;
+}
+.quantity input[type="number"] {
+	color: #000;
+	text-align: center;
+}
 .banner-slider-wrap.andra .swiper-pagination .swiper-pagination-total {
 	color: #999999;
 }

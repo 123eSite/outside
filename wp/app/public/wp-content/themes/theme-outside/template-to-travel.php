@@ -21,19 +21,19 @@
 </div>
 <div class="container no-padd margin-lg-30t margin-lg-30b">
     <div class="row-fluid">
-        <div class="col-sm-12 padd-only-xs margin-lg-30b">
+        <div class="col-sm-12 padd-only-xs margin-lg-30b" style="float: none;">
             <div class="heading  Center dark">
                 <div class="subtitle "><?php the_field('subtitulo_publicacoes'); ?></div>
                 <h2 class="title"><?php the_field('titulo_publicacoes'); ?></h2>
             </div>
         </div>
-        <div class="col-sm-12 ">
+        <div class="col-md-9" style="float: none; margin: 0 auto;">
             <div class="vc_column-inner ">
                     <div data-unique-key="14ad5b356d917aa464e6341724c17a46" class="js-load-more" data-start-page="1"
                         data-max-page="1" data-next-link="">
                         <div class="row prague_masonry prague_count_col3 prague_gap_col15  no-footer-content prague-load-wrapper" data-columns="prague_count_col4" data-gap="prague_gap_col15">
                             <?php $count=1; if(have_rows('lista_publicacoes')) : while(have_rows('lista_publicacoes')) : the_row(); ?>
-                            
+                    
                             <div class="portfolio-item-wrapp p_f_d7a8462 p_f_ddba60a p_f_aebfe46">
                                 <div class="portfolio-item">
                                     <div class="project-masonry-wrapper">

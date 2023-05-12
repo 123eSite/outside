@@ -151,6 +151,10 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'carrossel-viagens', 585, 712, true);
     add_image_size( 'menu-footer', 350, 240, true);
     add_image_size( 'produto', 335, 418, true);
+    add_image_size( 'portfolio-p', 521, 348, true);
+    add_image_size( 'portfolio-m', 521, 695, true);
+
+
 }
 
 /* Options Tema */
