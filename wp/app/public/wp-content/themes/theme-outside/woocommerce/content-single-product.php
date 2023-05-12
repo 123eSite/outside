@@ -33,15 +33,7 @@ if ( post_password_required() ) {
 	</a>
 </section>
 
-<?php
-/**
- * Hook: woocommerce_before_single_product.
- *
- * @hooked woocommerce_output_all_notices - 10
- */
-do_action( 'woocommerce_before_single_product' );
 
-?>
 
 <?php
 $attachment_id = get_field('imagem_banner_topo');
@@ -53,6 +45,15 @@ $imagem = wp_get_attachment_image_src( $attachment_id, 'banner-to-travel' );
 <div class="container no-padd margin-lg-50t padding-lg-100b">
     <div class="row">
         <div class="col-sm-12 col-lg-offset-2 col-lg-8 margin-xs-0b padding-lg-55b">
+        <?php
+/**
+ * Hook: woocommerce_before_single_product.
+ *
+ * @hooked woocommerce_output_all_notices - 10
+ */
+do_action( 'woocommerce_before_single_product' );
+
+?>
             <div class="no-padd simple dark">
                 <div class="content no-marg-bottom text-center">
                     <div class="subtitle"><?php the_field('subtitulo_publicacao'); ?></div>
