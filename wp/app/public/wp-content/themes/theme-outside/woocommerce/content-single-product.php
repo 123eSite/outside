@@ -73,14 +73,24 @@ do_action( 'woocommerce_before_single_product' );
                     <?php if($count==1) : ?>
                     <div class="no-padd-inner ">
                         <div class="project-detail-picture-wrapper ">
-                            <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full no-margin-bottom padding-left no-padd-xs"
+                            <img src="<?php echo $imagem[0]; ?>" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full no-margin-bottom padding-left no-padd-xs"
                                 alt="banner image" />
                                 <div class="project-detail-picture-descr">
                                     <?php the_field('texto_2_publicacao'); ?>
                                 </div>
                                 <?php elseif ($count==2) : ?>
                                 <img src="<?php echo $imagem[0]; ?>" alt="">
-								<?php
+                            </div>
+                        </div>
+                    </div>
+                    <?php elseif ($count==3) : ?>
+                    <div class=" vc_column_container col-sm-6 no-padd">
+                        <div class="no-padd-inner ">
+                            <div class="project-detail-picture-wrapper">
+                                <div class="project-detail-picture-descr text-right">
+                                    <h2 class="title big"><?php the_field('titulo_publicacao'); ?></h2>
+                                    <?php the_field('texto_1_publicacao'); ?>
+                                    <?php
 									/**
 									 * Hook: woocommerce_single_product_summary.
 									 *
@@ -94,21 +104,11 @@ do_action( 'woocommerce_before_single_product' );
 									 * @hooked WC_Structured_Data::generate_product_data() - 60
 									 */
 									do_action( 'woocommerce_single_product_summary' );
-									?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php elseif ($count==3) : ?>
-                    <div class=" vc_column_container col-sm-6 no-padd">
-                        <div class="no-padd-inner ">
-                            <div class="project-detail-picture-wrapper">
-                                <div class="project-detail-picture-descr text-right">
-                                    <h2 class="title big"><?php the_field('titulo_publicacao'); ?></h2>
-                                    <?php the_field('texto_1_publicacao'); ?>
+								?>
                                 </div>
-                                <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
+                                <img  src="<?php echo $imagem[0]; ?>" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
                                 <?php else : ?>
-                                    <img  src="#" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
+                                    <img  src="<?php echo $imagem[0]; ?>" data-lazy-src="<?php echo $imagem[0]; ?>" class="attachment-full size-full padding-left no-padd-xs" alt="banner image" />
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ do_action( 'woocommerce_before_single_product' );
                                 ?>
                                 <img src="<?php echo $imagem[0]; ?>" alt="">
                                 <?php endwhile; endif; ?>
-                               
+
 									<?php
 									/**
 									 * Hook: woocommerce_single_product_summary.
@@ -154,7 +154,7 @@ do_action( 'woocommerce_before_single_product' );
 									 */
 									do_action( 'woocommerce_single_product_summary' );
 									?>
-                               
+
                             </div>
                         </div>
                     </div>

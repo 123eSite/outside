@@ -38,7 +38,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
     <!--HEADER-->
     <header class="prague-header simple sticky-menu sticky-mobile-menu light ">

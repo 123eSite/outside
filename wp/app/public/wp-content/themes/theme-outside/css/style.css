@@ -7154,7 +7154,7 @@ h3#comments {
 .comment-respond h3 a{
 	color: #3D3D3D!important;
 	font-weight: 500;
-} 
+}
 nav.woocommerce-breadcrumb {
     display: none;
 }
@@ -16887,6 +16887,25 @@ h1.product_title.entry-title {
 	text-align: right;
 }
 
+form.cart .woocommerce-variation-add-to-cart {
+    display: flex;
+}
+form.cart .button {
+	font-size: 12px;
+}
+form.cart .quantity {
+    max-width: 80px;
+    height: 50px;
+}
+form.cart .quantity input[type="number"] {
+    color: #000;
+    text-align: center;
+    background: #e6e5db;
+    height: 50px;
+}
+.woo-variation-swatches.wvs-show-label .variations .label  {
+	display: none;
+}
 
 @media only screen and (max-width: 1200px) {
 	.about-section-classic .about-section__img {
