@@ -39,7 +39,7 @@
                                         <?php if(get_sub_field('titulo')) : ?>
                                         <h3 class="tg-item-title tg-element-1 title"><a target="_self" <?php if(get_sub_field('link')) : ?> href="<?php the_sub_field('link'); ?>" <?php endif; ?>><?php the_sub_field('titulo'); ?></a></h3>
                                         <?php endif; ?>
-                                        
+
                                         <?php if(get_sub_field('texto')) : ?>
                                         <span class="tg-cats-holder tg-element-2 category">
                                             <a class="projects-category" <?php if(get_sub_field('link')) : ?> href="<?php the_sub_field('link'); ?>" <?php endif; ?> rel="category">
@@ -60,5 +60,35 @@
         </div>
     </div>
     <?php endwhile; endif; ?>
+    <div class="container margin-lg-90b margin-sm-50b padd-only-xs">
+        <div class="row justify-content-center margin-lg-100t">
+            <div class="col-sm-7 no-padd">
+                <div class="padd-only-xs ">
+                    <div class="text-center dark">
+                        <div class="subtitle "><?php the_field('subtitulo_formulario'); ?></div>
+                        <h2 class="title"><?php the_field('titulo_formulario'); ?></h2>
+                        <div class="content ">
+                            <div class="text-center"><?php the_field('texto_formulario'); ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid no-padd margin-lg-30t margin-lg-110b margin-sm-20t margin-sm-70b">
+            <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-xs-12 no-padd">
+                <div class="padd-only-xs ">
+                    <div class="prague-formidable  vc_formidable">
+                        <div class="frm_forms  with_frm_style frm_style_formidable-style-2-2" id="frm_form_4_container">
+                            <div class="frm_form_fields ">
+                                <fieldset>
+                                    <?php echo do_shortcode('[contact-form-7 id="378" title="Contato"]'); ?>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="test 4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php get_footer(); ?>
-
