@@ -103,7 +103,7 @@
             <div class="swiper-button-next swiper-buttons"></div>
         </div>
     </div>
-    <?php elseif('nothing-basic') : ?>
+    <?php elseif(is_page('nothing-basic')) : ?>
         <div class="row-fluid">
             <div class="col-sm-12 no-padd">
                 <div class=" no-padd-xs">
