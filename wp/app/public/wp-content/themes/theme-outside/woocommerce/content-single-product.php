@@ -163,7 +163,7 @@ do_action( 'woocommerce_before_single_product' );
         </div>
     </div>
 
-	<div class="container no-padd margin-lg-100b margin list-icons-custom">
+	<div class="no-padd margin-lg-100b margin list-icons-custom">
         <div class="row-fluid">
             <div class="col-sm-12 no-padd">
                 <div class=" no-padd-xs">

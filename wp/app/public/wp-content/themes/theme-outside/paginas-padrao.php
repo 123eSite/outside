@@ -103,6 +103,38 @@
             <div class="swiper-button-next swiper-buttons"></div>
         </div>
     </div>
+    <?php elseif('nothing-basic') : ?>
+        <div class="row-fluid">
+            <div class="col-sm-12 no-padd">
+                <div class=" no-padd-xs">
+                    <div class="project-detail-block-outer invert">
+                        <?php
+                        $args = array(
+                            'post_type' => 'product',
+                            'posts_per_page' => -1,
+                        );
+                        $query = new WP_Query( $args );
+                        ?>
+                        <?php if ( $query->have_posts() ) : ?>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <div class="project-detail-block-wrapper">
+                            <a href="<?php the_permalink(); ?>">
+                            <div class="project-detail-block-item">
+                            <div class="project-detail-block-title">
+                                        <?php the_title(); ?> </div>
+                                        <div class="project-detail-block-descr">
+                                            <p>
+                                                <?php echo get_the_date('d M'); ?> de <?php echo get_the_date('Y'); ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     <?php else :  ?>
     <div class="row-fluid">
         <div class="col-sm-12 no-padd">
@@ -110,8 +142,6 @@
                 <div class="project-detail-block-outer invert">
                     <?php if(is_page('travel-time')) {
                         $cat = 2;
-                    } elseif(is_page('nothing-basic')) {
-                        $cat = 3;
                     }
                     elseif(is_page('hey-nutri')) {
                         $cat = 4;

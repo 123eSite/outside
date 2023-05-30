@@ -12782,7 +12782,7 @@ nav.woocommerce-breadcrumb {
 
 .project-detail-block-outer .project-detail-block-wrapper {
 	display: inline-block;
-	width: 25%;
+	width: 30%;
 	float: left;
 	padding: 15px;
 }
@@ -12956,7 +12956,7 @@ nav.woocommerce-breadcrumb {
 }
 
 .project-detail-picture-wrapper .project-detail-picture-descr p {
-	margin-bottom: 32px;
+	margin-bottom: 10px;
 }
 
 .project-detail-picture-wrapper .project-detail-picture-descr h2.title.big {
@@ -15341,10 +15341,14 @@ nav.woocommerce-breadcrumb {
 .woocommerce-product-details__short-description {
 	max-width: 500px;
 	margin-bottom: 30px;
+	margin-top: 10px;
 	color: #7e7d7d;
-	font-size: 16px;
+
 	font-weight: 300;
-	line-height: 32px;
+
+}
+.project-detail-picture-wrapper .project-detail-picture-descr .woocommerce-product-details__short-description p {
+	margin-bottom: 10px;
 }
 
 /*quantity*/
@@ -17193,6 +17197,7 @@ form.cart .quantity input[type="number"] {
 		width: 100%;
 		max-width: none;
 		text-align: center;
+		padding: 0 15px;
 	}
 
 	.about-section-modern .title {

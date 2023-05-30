@@ -36,6 +36,15 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?v=11">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fullscreen-projects.css">
     <?php wp_head(); ?>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7PBSC3F3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7PBSC3F3H');
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -56,7 +65,6 @@
                     <div class="prague-navigation-inner">
                         <nav>
                             <?php wp_nav_menu(array('menu'=> 2, 'menu_class' => 'main-menu', 'container' => '')); ?>
-
                         </nav>
                     </div>
                 </div>

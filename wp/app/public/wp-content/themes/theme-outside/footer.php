@@ -2,7 +2,7 @@
         <div class="container-fluid">
             <div class="wpb_column vc_column_container col-sm-12 no-padd  margin-lg-35t margin-sm-20t margin-lg-50b">
                 <div class="vc_column-inner ">
-                    <div class="row prague_masonry prague_count_col4 prague_gap_col10 no-footer-content prague-load-wrapper"
+                    <div class="row prague_masonry prague_count_col5 prague_gap_col10 no-footer-content prague-load-wrapper"
                         data-columns="prague_count_col4" data-gap="prague_gap_col15">
                         <?php if(have_rows('lista_menu_footer','options')) : while(have_rows('lista_menu_footer','options')) : the_row(); ?>
                         <div class="portfolio-item-wrapp">
