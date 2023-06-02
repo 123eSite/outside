@@ -33,14 +33,14 @@
                         data-max-page="1" data-next-link="">
                         <div class="row prague_masonry prague_count_col3 prague_gap_col15  no-footer-content prague-load-wrapper" data-columns="prague_count_col4" data-gap="prague_gap_col15">
                             <?php $count=1; if(have_rows('lista_publicacoes')) : while(have_rows('lista_publicacoes')) : the_row(); ?>
-                    
+
                             <div class="portfolio-item-wrapp p_f_d7a8462 p_f_ddba60a p_f_aebfe46">
                                 <div class="portfolio-item">
                                     <div class="project-masonry-wrapper">
                                         <a class="project-masonry-item-img-link" href="<?php the_sub_field('link'); ?>">
                                         <?php
                                             $attachment_id = get_sub_field('imagem');
-                                            if ($count % 3 == 0) {
+                                            if ($count % 3 == 0 && !wp_is_mobile()) {
                                                 $imagem = wp_get_attachment_image_src($attachment_id, 'list-to-travel-2');
                                             } else {
                                                 $imagem = wp_get_attachment_image_src($attachment_id, 'list-to-travel-1');
@@ -64,5 +64,3 @@
 </div>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
-
-

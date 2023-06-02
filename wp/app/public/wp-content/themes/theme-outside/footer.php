@@ -2,7 +2,8 @@
         <div class="container-fluid">
             <div class="wpb_column vc_column_container col-sm-12 no-padd  margin-lg-35t margin-sm-20t margin-lg-50b">
                 <div class="vc_column-inner ">
-                    <div class="row prague_masonry prague_count_col5 prague_gap_col10 no-footer-content prague-load-wrapper"
+                    <?php if(!wp_is_mobile()) : ?>
+                    <div class="row prague_masonry prague_count_col5 prague_gap_col10 no-footer-content prague-load-wrapper menu-footer-desktop"
                         data-columns="prague_count_col4" data-gap="prague_gap_col15">
                         <?php if(have_rows('lista_menu_footer','options')) : while(have_rows('lista_menu_footer','options')) : the_row(); ?>
                         <div class="portfolio-item-wrapp">
@@ -24,6 +25,30 @@
                         </div>
                         <?php endwhile; endif; ?>
                     </div>
+                    <?php else : ?>
+                    <div class="menu-footer-carrossel">
+                        <div class="swiper-container swiper" data-autoplay="1" data-loop="1" data-speed="3000"
+                        data-space-between="30">
+                            <div class="swiper-wrapper">
+                                <?php if(have_rows('lista_menu_footer','options')) : while(have_rows('lista_menu_footer','options')) : the_row(); ?>
+                                    <div class="swiper-slide">
+                                        <a href="<?php the_sub_field('link'); ?>" target="_self">
+                                            <?php
+                                            $attachment_id = get_sub_field('imagem');
+                                            $imagem = wp_get_attachment_image_src( $attachment_id, 'menu-footer' );
+                                            ?>
+                                            <img src="<?php echo $imagem[0]; ?>" alt="<?php the_sub_field('titulo'); ?>" data-s-hidden="true" data-s-sibling="true" />
+
+                                            <div class="project-item-content">
+                                                <h4 class="project-item-title"><?php the_sub_field('titulo'); ?></h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endwhile; endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

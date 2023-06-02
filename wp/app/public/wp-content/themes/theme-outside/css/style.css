@@ -7720,10 +7720,23 @@ nav.woocommerce-breadcrumb {
 	.prague_count_col2 .portfolio-item-wrapp {
 		width: 100% !important;
 	}
-
+	.prague_masonry .portfolio-item {
+		margin-bottom: 15px !important;
+	}
+	.prague_gap_col15 .portfolio-item {
+		margin: 0 5px;
+	}
+	.project-masonry-wrapper .project-masonry-item-title {
+		font-size: 15px;
+	}
+	.project-masonry-wrapper .project-masonry-item-content {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+/*
 	.prague_count_col3 .portfolio-item-wrapp {
 		width: 100% !important;
-	}
+	} */
 
 	.prague_count_col4 .portfolio-item-wrapp,
 	.prague_masonry.prague_count_col4 .portfolio-item-wrapp {
@@ -19124,6 +19137,28 @@ form.woocommerce-cart-form {
     position: relative;
     color: #fff;
 }
+.menu-footer-carrossel .swiper-slide a {
+	display: block;
+	position: relative;
+}
+.menu-footer-carrossel .project-item-content {
+	position: absolute;
+    left: 0;
+    bottom: 30px;
+	padding: 2px 20px 3px 10px;
+    background-color: rgba(246, 245, 236, 0.651);
+    max-width: 90%;
+}
+.menu-footer-carrossel .project-item-title {
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 @media screen and (max-width: 768px) {
 	.container.no-padd.margin.margin-xs-20b.desktop-none {
 		padding: 0 15px;
@@ -19181,5 +19216,16 @@ form.woocommerce-cart-form {
 		margin-left: 20px;
 		font-size: 20px;
 		margin: 30px 0 60px;
+	}
+	.about-section-modern .grad-word {
+		left: 16px;
+	}
+	.alignleft {
+		float: none;
+		margin: 0 auto;
+	}
+	.alignright {
+		float: none;
+		margin: 0 auto;
 	}
 }

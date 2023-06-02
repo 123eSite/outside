@@ -32,13 +32,13 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
 .grid-sizer,
 .grid-item {
         width: calc(100% / 1 );
 
     }
-}
+} */
 
 .img-wrapp img{
     position: relative;
