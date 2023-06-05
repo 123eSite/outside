@@ -61,7 +61,7 @@ do_action( 'woocommerce_before_single_product' );
             </div>
         </div>
     </div>
-    <div class="row justify-content-center mobile-none">
+    <div class="row justify-content-center">
         <div class="col-md-9">
             <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
                 <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
@@ -118,7 +118,7 @@ do_action( 'woocommerce_before_single_product' );
             </div>
         </div>
     </div>
-    <div class="row justify-content-center desktop-none">
+    <?php /*<div class="row justify-content-center desktop-none">
         <div class="col-md-9">
             <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid">
                 <div class=" vc_column_container col-sm-6 padding-lg-30t padding-xs-0t  no-padd">
@@ -152,8 +152,8 @@ do_action( 'woocommerce_before_single_product' );
 									 * @hooked woocommerce_template_single_sharing - 50
 									 * @hooked WC_Structured_Data::generate_product_data() - 60
 									 */
-									do_action( 'woocommerce_single_product_summary' );
-									?>
+									//do_action( 'woocommerce_single_product_summary' );
+								/*	?>
 
                             </div>
                         </div>
@@ -161,7 +161,7 @@ do_action( 'woocommerce_before_single_product' );
                 </div>
             </div>
         </div>
-    </div>
+    </div>*/ ?>
 
 	<div class="no-padd margin-lg-100b margin list-icons-custom">
         <div class="row-fluid">
