@@ -83,6 +83,11 @@
             <div class="prague-social-nav">
                 <ul class="social-content">
                     <li>
+                        <a target="_blank" href="<?php bloginfo('url'); ?>/cart/">
+                            <img width="24" src="<?php bloginfo('template_url'); ?>/img/cart.svg" alt="Carrinho">
+                        </a>
+                    </li>
+                    <li>
                         <a target="_blank" href="<?php the_field('instagram','options'); ?>">
                             <i aria-hidden="true" class="fa fa-instagram"></i>
                         </a>

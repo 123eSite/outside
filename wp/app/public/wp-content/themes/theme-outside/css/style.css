@@ -19231,3 +19231,12 @@ form.woocommerce-cart-form {
 		display: block;
 	}
 }
+.woocommerce ul#shipping_method li label {
+    font-size: 14px;
+}
+.woocommerce ul#shipping_method li input {
+	margin-top: 7px !important;
+}
+.prague-header.light .prague-social-nav a img {
+    vertical-align: top;
+}
